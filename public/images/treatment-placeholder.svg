@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620">
+  <rect width="900" height="620" rx="30" fill="#dff4ee"/>
+  <rect x="168" y="280" width="560" height="112" rx="24" fill="#ffffff"/>
+  <rect x="560" y="214" width="168" height="66" rx="22" fill="#89c7b7"/>
+  <circle cx="310" cy="224" r="64" fill="#f0bc7f"/>
+  <path d="M256 384c12-88 48-142 104-142s92 54 104 142" fill="#0d6e6e"/>
+  <circle cx="612" cy="182" r="42" fill="#f0bc7f"/>
+  <path d="M574 292c8-58 33-94 76-94s68 36 76 94" fill="#2f7f72"/>
+  <text x="450" y="548" text-anchor="middle" fill="#205c5b" font-family="Arial, sans-serif" font-size="30">Platzhalter für Behandlungsbild</text>
+</svg>

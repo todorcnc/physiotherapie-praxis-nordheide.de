@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  color: #1f2a2c;
+  background:
+    radial-gradient(circle at top left, rgba(137, 199, 183, 0.2), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(201, 140, 73, 0.12), transparent 30%),
+    #f6f4ef;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.brand-mark {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 30% 30%, #f3d0a7 0%, #f3d0a7 18%, transparent 19%),
+    linear-gradient(135deg, #0d6e6e 0%, #65a7a7 100%);
+  position: relative;
+  box-shadow: 0 16px 32px rgba(13, 110, 110, 0.2);
+}
+
+.brand-mark::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.72);
+}
+
+.hero-shell {
+  padding: 28px;
+  border-radius: 36px;
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.76)),
+    linear-gradient(120deg, rgba(223, 244, 238, 0.85), rgba(247, 239, 228, 0.7));
+  border: 1px solid rgba(13, 110, 110, 0.08);
+  box-shadow: 0 28px 80px rgba(13, 110, 110, 0.1);
+}
+
+.feature-band {
+  padding: 32px;
+  border-radius: 32px;
+  background: linear-gradient(135deg, rgba(223, 244, 238, 0.84), rgba(255, 255, 255, 0.9));
+  border: 1px solid rgba(13, 110, 110, 0.08);
+}
+
+.icon-chip {
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: rgba(13, 110, 110, 0.08);
+  color: #0d6e6e;
+}
+
+.cta-panel {
+  padding: 36px;
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.12), transparent 22%),
+    linear-gradient(135deg, #0d6e6e 0%, #114f57 100%);
+}
+
+@media (max-width: 900px) {
+  .hero-shell,
+  .feature-band,
+  .cta-panel {
+    padding: 24px;
+  }
+}
