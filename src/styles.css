@@ -25,15 +25,31 @@ body {
   min-height: 100vh;
 }
 
+html[data-consent-analytics="true"] body::before {
+  content: "Analytics allowed";
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1200;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(13, 110, 110, 0.92);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  pointer-events: none;
+}
+
 .brand-mark {
   width: 48px;
   height: 48px;
-  border-radius: 16px;
+  border-radius: var(--app-radius-xs);
   background:
     radial-gradient(circle at 30% 30%, #f3d0a7 0%, #f3d0a7 18%, transparent 19%),
     linear-gradient(135deg, #0d6e6e 0%, #65a7a7 100%);
   position: relative;
-  box-shadow: 0 16px 32px rgba(13, 110, 110, 0.2);
+  box-shadow: var(--app-shadow-brand);
 }
 
 .brand-mark::after {
@@ -46,38 +62,34 @@ body {
 
 .hero-shell {
   padding: 28px;
-  border-radius: 36px;
-  background:
-    linear-gradient(160deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.76)),
-    linear-gradient(120deg, rgba(223, 244, 238, 0.85), rgba(247, 239, 228, 0.7));
-  border: 1px solid rgba(13, 110, 110, 0.08);
-  box-shadow: 0 28px 80px rgba(13, 110, 110, 0.1);
+  border-radius: var(--app-radius-xl);
+  background: var(--app-surface-hero);
+  border: 1px solid var(--app-surface-border);
+  box-shadow: var(--app-shadow-shell);
 }
 
 .feature-band {
   padding: 32px;
-  border-radius: 32px;
-  background: linear-gradient(135deg, rgba(223, 244, 238, 0.84), rgba(255, 255, 255, 0.9));
-  border: 1px solid rgba(13, 110, 110, 0.08);
+  border-radius: var(--app-radius-lg);
+  background: var(--app-surface-feature);
+  border: 1px solid var(--app-surface-border);
 }
 
 .icon-chip {
-  width: 56px;
-  height: 56px;
+  width: var(--app-icon-chip-size);
+  height: var(--app-icon-chip-size);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 18px;
-  background: rgba(13, 110, 110, 0.08);
+  border-radius: var(--app-radius-sm);
+  background: var(--app-surface-muted);
   color: #0d6e6e;
 }
 
 .cta-panel {
   padding: 36px;
-  border-radius: 32px;
-  background:
-    radial-gradient(circle at top right, rgba(255, 255, 255, 0.12), transparent 22%),
-    linear-gradient(135deg, #0d6e6e 0%, #114f57 100%);
+  border-radius: var(--app-radius-lg);
+  background: var(--app-surface-cta);
 }
 
 @media (max-width: 900px) {

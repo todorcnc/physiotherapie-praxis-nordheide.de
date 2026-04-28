@@ -22,7 +22,7 @@ function actionProps(action) {
 
 function PageHero({ eyebrow, title, description, primaryAction, secondaryAction, image, imageAlt }) {
   return (
-    <Container maxWidth="lg" sx={{ pt: { xs: 6, md: 10 } }}>
+    <Container sx={{ pt: { xs: 6, md: 10 } }}>
       <Box className="hero-shell">
         <Stack direction={{ xs: "column", md: "row" }} spacing={{ xs: 4, md: 6 }} alignItems="center">
           <Box sx={{ flex: 1 }}>
@@ -35,12 +35,7 @@ function PageHero({ eyebrow, title, description, primaryAction, secondaryAction,
             </Typography>
             <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
               {primaryAction && (
-                <Button
-                  {...actionProps(primaryAction)}
-                  variant="contained"
-                  color="primary"
-                  endIcon={<ArrowOutwardRoundedIcon />}
-                >
+                <Button {...actionProps(primaryAction)} variant="contained" color="primary" endIcon={<ArrowOutwardRoundedIcon />}>
                   {primaryAction.label}
                 </Button>
               )}
@@ -59,9 +54,9 @@ function PageHero({ eyebrow, title, description, primaryAction, secondaryAction,
               sx={{
                 width: "100%",
                 display: "block",
-                borderRadius: 8,
-                border: "1px solid rgba(13, 110, 110, 0.08)",
-                boxShadow: "0 30px 80px rgba(13, 110, 110, 0.12)",
+                borderRadius: (theme) => `${theme.app.shell.heroImageRadius}px`,
+                border: "1px solid var(--app-surface-border)",
+                boxShadow: "var(--app-shadow-media)",
               }}
             />
           </Box>

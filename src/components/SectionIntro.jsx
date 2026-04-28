@@ -2,7 +2,7 @@ import { Stack, Typography } from "@mui/material";
 
 function SectionIntro({ eyebrow, title, description }) {
   return (
-    <Stack spacing={1.5} sx={{ mb: 4.5, maxWidth: 720 }}>
+    <Stack spacing={1.5} sx={{ mb: 4.5, maxWidth: (theme) => `${theme.app.layout.contentMaxWidth}px` }}>
       <Typography variant="overline" sx={{ color: "primary.main", letterSpacing: "0.16em", fontWeight: 800 }}>
         {eyebrow}
       </Typography>

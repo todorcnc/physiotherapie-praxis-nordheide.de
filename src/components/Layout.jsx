@@ -1,25 +1,17 @@
 import MenuIcon from "@mui/icons-material/Menu";
 import PhoneInTalkRoundedIcon from "@mui/icons-material/PhoneInTalkRounded";
-import {
-  AppBar,
-  Box,
-  Button,
-  Container,
-  Drawer,
-  IconButton,
-  List,
-  ListItemButton,
-  ListItemText,
-  Stack,
-  Toolbar,
-  Typography,
-} from "@mui/material";
+import { AppBar, Box, Button, Container, Drawer, IconButton, List, ListItemButton, ListItemText, Stack, Toolbar, Typography } from "@mui/material";
 import { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
+import { useConsent } from "../context/ConsentContext";
 import { navigationItems, practiceInfo } from "../data/siteContent";
+import CookieBanner from "./CookieBanner";
+import CookieSettingsButton from "./CookieSettingsButton";
+import CookieSettingsDialog from "./CookieSettingsDialog";
 
 function Layout() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { resetConsent } = useConsent();
 
   const navLinkStyle = ({ isActive }) => ({
     color: isActive ? "#0d6e6e" : "#274042",
@@ -38,7 +30,7 @@ function Layout() {
           borderBottom: "1px solid rgba(13, 110, 110, 0.08)",
         }}
       >
-        <Container maxWidth="lg">
+        <Container>
           <Toolbar disableGutters sx={{ minHeight: 84 }}>
             <Stack direction="row" spacing={1.5} alignItems="center" sx={{ flexGrow: 1 }}>
               <Box className="brand-mark" />
@@ -58,22 +50,12 @@ function Layout() {
                   {item.label}
                 </NavLink>
               ))}
-              <Button
-                component={NavLink}
-                to="/kontakt"
-                variant="contained"
-                color="primary"
-                startIcon={<PhoneInTalkRoundedIcon />}
-              >
+              <Button component={NavLink} to="/kontakt" variant="contained" color="primary" startIcon={<PhoneInTalkRoundedIcon />}>
                 Termin anfragen
               </Button>
             </Stack>
 
-            <IconButton
-              sx={{ display: { xs: "inline-flex", md: "none" } }}
-              onClick={() => setMobileOpen(true)}
-              aria-label="Menü öffnen"
-            >
+            <IconButton sx={{ display: { xs: "inline-flex", md: "none" } }} onClick={() => setMobileOpen(true)} aria-label="Menü öffnen">
               <MenuIcon />
             </IconButton>
           </Toolbar>
@@ -87,12 +69,7 @@ function Layout() {
           </Typography>
           <List>
             {navigationItems.map((item) => (
-              <ListItemButton
-                key={item.path}
-                component={NavLink}
-                to={item.path}
-                onClick={() => setMobileOpen(false)}
-              >
+              <ListItemButton key={item.path} component={NavLink} to={item.path} onClick={() => setMobileOpen(false)}>
                 <ListItemText primary={item.label} />
               </ListItemButton>
             ))}
@@ -103,13 +80,8 @@ function Layout() {
       <Outlet />
 
       <Box component="footer" sx={{ py: 5, mt: 8, borderTop: "1px solid rgba(13, 110, 110, 0.08)" }}>
-        <Container maxWidth="lg">
-          <Stack
-            direction={{ xs: "column", md: "row" }}
-            spacing={3}
-            justifyContent="space-between"
-            alignItems={{ xs: "flex-start", md: "center" }}
-          >
+        <Container>
+          <Stack direction={{ xs: "column", md: "row" }} spacing={3} justifyContent="space-between" alignItems={{ xs: "flex-start", md: "center" }}>
             <Box>
               <Typography variant="h6" sx={{ mb: 1, fontFamily: '"Fraunces", Georgia, serif' }}>
                 {practiceInfo.name}
@@ -121,10 +93,19 @@ function Layout() {
             <Box>
               <Typography color="text.secondary">Tel. {practiceInfo.phone}</Typography>
               <Typography color="text.secondary">{practiceInfo.email}</Typography>
+              <Stack direction={{ xs: "column", sm: "row" }} spacing={2} sx={{ mt: 1.5 }}>
+                <CookieSettingsButton />
+                <Button variant="text" color="primary" onClick={resetConsent} sx={{ px: 0, minWidth: "auto" }}>
+                  Reset consent
+                </Button>
+              </Stack>
             </Box>
           </Stack>
         </Container>
       </Box>
+
+      <CookieSettingsDialog />
+      <CookieBanner />
     </Box>
   );
 }

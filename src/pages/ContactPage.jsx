@@ -3,6 +3,7 @@ import AlternateEmailRoundedIcon from "@mui/icons-material/AlternateEmailRounded
 import CallRoundedIcon from "@mui/icons-material/CallRounded";
 import LocationOnRoundedIcon from "@mui/icons-material/LocationOnRounded";
 import { Box, Button, Card, CardContent, Container, Grid, Stack, Typography } from "@mui/material";
+import ConsentAwareEmbed from "../components/ConsentAwareEmbed";
 import PageHero from "../components/PageHero";
 import SectionIntro from "../components/SectionIntro";
 import { practiceInfo } from "../data/siteContent";
@@ -27,7 +28,7 @@ function ContactPage() {
         imageAlt="Platzhalter für Empfang oder Praxisansicht"
       />
 
-      <Container maxWidth="lg" sx={{ py: { xs: 8, md: 10 } }}>
+      <Container sx={{ py: { xs: 8, md: 10 } }}>
         <SectionIntro
           eyebrow="Kontaktinfos"
           title="Alle wichtigen Angaben an einem Ort."
@@ -52,7 +53,16 @@ function ContactPage() {
         </Grid>
       </Container>
 
-      <Container maxWidth="lg" sx={{ pb: { xs: 8, md: 10 } }}>
+      <Container sx={{ pb: { xs: 4, md: 6 } }}>
+        <SectionIntro
+          eyebrow="External content"
+          title="Maps and third-party embeds stay blocked until they are allowed."
+          description="This is the practical effect of the consent logic: external content is withheld first and only becomes available after explicit opt-in."
+        />
+        <ConsentAwareEmbed />
+      </Container>
+
+      <Container sx={{ pb: { xs: 8, md: 10 } }}>
         <Card>
           <CardContent sx={{ p: { xs: 4, md: 5 } }}>
             <Typography variant="h4" sx={{ mb: 2 }}>

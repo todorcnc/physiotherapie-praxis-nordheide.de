@@ -17,7 +17,7 @@ function ServicesPage() {
         imageAlt="Platzhalter für eine Therapieszene"
       />
 
-      <Container maxWidth="lg" sx={{ py: { xs: 8, md: 10 } }}>
+      <Container sx={{ py: { xs: 8, md: 10 } }}>
         <SectionIntro
           eyebrow="Angebot"
           title="Von klassischer Physiotherapie bis zu ergänzenden Anwendungen."

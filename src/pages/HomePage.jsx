@@ -2,17 +2,9 @@ import ArrowForwardRoundedIcon from "@mui/icons-material/ArrowForwardRounded";
 import LocalHospitalOutlinedIcon from "@mui/icons-material/LocalHospitalOutlined";
 import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
 import SelfImprovementOutlinedIcon from "@mui/icons-material/SelfImprovementOutlined";
-import {
-  Box,
-  Button,
-  Card,
-  CardContent,
-  Container,
-  Grid,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { Box, Button, Card, CardContent, Container, Grid, Stack, Typography } from "@mui/material";
 import { NavLink } from "react-router-dom";
+import ConsentDebugPanel from "../components/ConsentDebugPanel";
 import PageHero from "../components/PageHero";
 import SectionIntro from "../components/SectionIntro";
 import { homeHighlights, practiceInfo, reviews, services } from "../data/siteContent";
@@ -32,7 +24,7 @@ function HomePage() {
         imageAlt="Platzhalter für ein zukünftiges Praxisfoto"
       />
 
-      <Container maxWidth="lg" sx={{ py: { xs: 8, md: 10 } }}>
+      <Container sx={{ py: { xs: 8, md: 10 } }}>
         <Grid container spacing={3}>
           {homeHighlights.map((item, index) => (
             <Grid key={item.title} size={{ xs: 12, md: 4 }}>
@@ -52,7 +44,7 @@ function HomePage() {
         </Grid>
       </Container>
 
-      <Container maxWidth="lg" sx={{ py: { xs: 2, md: 4 } }}>
+      <Container sx={{ py: { xs: 2, md: 4 } }}>
         <Box className="feature-band">
           <SectionIntro
             eyebrow="Willkommen"
@@ -62,7 +54,8 @@ function HomePage() {
           <Stack direction={{ xs: "column", md: "row" }} spacing={4} alignItems="center">
             <Box sx={{ flex: 1 }}>
               <Typography sx={{ color: "text.secondary", lineHeight: 1.85, mb: 2 }}>
-                Die Praxis positioniert sich als verlässliche Anlaufstelle im Ärztehaus Nordheide. Im neuen Design übersetzen wir dieses Vertrauen in eine ruhigere, hochwertigere Bildsprache, klare Inhalte und deutliche Handlungsaufforderungen.
+                Die Praxis positioniert sich als verlässliche Anlaufstelle im Ärztehaus Nordheide. Im neuen Design übersetzen wir dieses Vertrauen in eine
+                ruhigere, hochwertigere Bildsprache, klare Inhalte und deutliche Handlungsaufforderungen.
               </Typography>
               <Typography sx={{ color: "text.secondary", lineHeight: 1.85 }}>
                 Für den Livegang können die Platzhalterbilder später einfach durch echte Praxis-, Team- und Behandlungsfotos ersetzt werden.
@@ -72,13 +65,13 @@ function HomePage() {
               component="img"
               src="/images/treatment-placeholder.svg"
               alt="Platzhalter für ein Behandlungsfoto"
-              sx={{ flex: 1, width: "100%", borderRadius: 8 }}
+              sx={{ flex: 1, width: "100%", borderRadius: "var(--app-radius-lg)" }}
             />
           </Stack>
         </Box>
       </Container>
 
-      <Container maxWidth="lg" sx={{ py: { xs: 8, md: 10 } }}>
+      <Container sx={{ py: { xs: 8, md: 10 } }}>
         <SectionIntro
           eyebrow="Leistungsauszug"
           title="Wichtige Behandlungen auf einen Blick."
@@ -105,7 +98,7 @@ function HomePage() {
         </Grid>
       </Container>
 
-      <Container maxWidth="lg" sx={{ py: { xs: 4, md: 6 } }}>
+      <Container sx={{ py: { xs: 4, md: 6 } }}>
         <Grid container spacing={3}>
           {reviews.map((review) => (
             <Grid key={review.quote} size={{ xs: 12, md: 6 }}>
@@ -114,9 +107,7 @@ function HomePage() {
                   <Typography variant="h5" sx={{ mb: 2 }}>
                     “
                   </Typography>
-                  <Typography sx={{ lineHeight: 1.9, color: "text.secondary", mb: 2 }}>
-                    {review.quote}
-                  </Typography>
+                  <Typography sx={{ lineHeight: 1.9, color: "text.secondary", mb: 2 }}>{review.quote}</Typography>
                   <Typography variant="subtitle2" sx={{ color: "primary.main" }}>
                     {review.author}
                   </Typography>
@@ -127,7 +118,16 @@ function HomePage() {
         </Grid>
       </Container>
 
-      <Container maxWidth="lg" sx={{ py: { xs: 8, md: 10 } }}>
+      <Container sx={{ py: { xs: 4, md: 6 } }}>
+        <SectionIntro
+          eyebrow="Consent logic"
+          title="Optional technologies react to the visitor's choice."
+          description="The site now keeps a real consent state. Optional categories stay blocked until the visitor actively accepts them, and the choice can be changed later from the footer."
+        />
+        <ConsentDebugPanel />
+      </Container>
+
+      <Container sx={{ py: { xs: 8, md: 10 } }}>
         <Box className="cta-panel">
           <Stack direction={{ xs: "column", md: "row" }} spacing={3} justifyContent="space-between" alignItems={{ xs: "flex-start", md: "center" }}>
             <Box>
