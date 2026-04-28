@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620">
+  <rect width="900" height="620" rx="30" fill="#f7efe4"/>
+  <circle cx="266" cy="250" r="86" fill="#f0bc7f"/>
+  <circle cx="450" cy="210" r="76" fill="#f0bc7f"/>
+  <circle cx="636" cy="250" r="86" fill="#f0bc7f"/>
+  <path d="M162 480c15-95 76-152 104-152s89 57 104 152" fill="#2f7f72"/>
+  <path d="M358 450c12-83 56-133 92-133s80 50 92 133" fill="#0d6e6e"/>
+  <path d="M530 480c15-95 76-152 104-152s89 57 104 152" fill="#7ea89d"/>
+  <text x="450" y="560" text-anchor="middle" fill="#5b5248" font-family="Arial, sans-serif" font-size="30">Platzhalter für Teamfoto</text>
+</svg>
