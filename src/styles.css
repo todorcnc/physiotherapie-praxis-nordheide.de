@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
 :root {
   color: #1f2a2c;
@@ -23,22 +23,6 @@ body {
 
 #root {
   min-height: 100vh;
-}
-
-html[data-consent-analytics="true"] body::before {
-  content: "Analytics allowed";
-  position: fixed;
-  right: 16px;
-  bottom: 16px;
-  z-index: 1200;
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: rgba(13, 110, 110, 0.92);
-  color: #fff;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  pointer-events: none;
 }
 
 .brand-mark {

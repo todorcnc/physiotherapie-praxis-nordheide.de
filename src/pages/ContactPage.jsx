@@ -1,70 +1,53 @@
-import AccessTimeRoundedIcon from "@mui/icons-material/AccessTimeRounded";
 import AlternateEmailRoundedIcon from "@mui/icons-material/AlternateEmailRounded";
-import CallRoundedIcon from "@mui/icons-material/CallRounded";
 import LocationOnRoundedIcon from "@mui/icons-material/LocationOnRounded";
-import { Box, Button, Card, CardContent, Container, Grid, Stack, Typography } from "@mui/material";
+import { Container, Grid, Typography } from "@mui/material";
 import ConsentAwareEmbed from "../components/ConsentAwareEmbed";
-import { withBase } from "../config/runtime";
-import PageHero from "../components/PageHero";
+import IconInfoCard from "../components/IconInfoCard";
+import OpeningHoursAndCallGrid from "../components/OpeningHoursAndCallGrid";
 import SectionIntro from "../components/SectionIntro";
 import { practiceInfo } from "../data/siteContent";
 
+const practiceAddress = `${practiceInfo.addressLine1}, ${practiceInfo.addressLine2}`;
+const googleMapsEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(practiceAddress)}&z=16&output=embed`;
+
 const contactItems = [
-  { icon: <CallRoundedIcon />, title: "Telefon", content: practiceInfo.phone },
   { icon: <AlternateEmailRoundedIcon />, title: "E-Mail", content: practiceInfo.email },
-  { icon: <LocationOnRoundedIcon />, title: "Adresse", content: `${practiceInfo.addressLine1}, ${practiceInfo.addressLine2}` },
-  { icon: <AccessTimeRoundedIcon />, title: "Öffnungszeiten", content: practiceInfo.hours.join(" | ") },
+  { icon: <LocationOnRoundedIcon />, title: "Adresse", content: practiceAddress },
 ];
 
 function ContactPage() {
   return (
     <>
       <Container sx={{ py: { xs: 8, md: 10 } }}>
-        <SectionIntro eyebrow="Kontaktinfos" title="Alle wichtigen Angaben an einem Ort." />
+        <SectionIntro
+          eyebrow="Kontaktinfos"
+          title="Alle wichtigen Angaben an einem Ort."
+          description="So erreichen Sie unsere Praxis schnell und unkompliziert - telefonisch, per E-Mail oder direkt vor Ort."
+        />
         <Grid container spacing={3}>
           {contactItems.map((item) => (
             <Grid key={item.title} size={{ xs: 12, md: 6 }}>
-              <Card sx={{ height: "100%" }}>
-                <CardContent sx={{ p: 4 }}>
-                  <Box className="icon-chip">{item.icon}</Box>
-                  <Typography variant="h5" sx={{ mt: 2.5, mb: 1.5 }}>
-                    {item.title}
-                  </Typography>
-                  <Typography color="text.secondary" sx={{ lineHeight: 1.8 }}>
-                    {item.content}
-                  </Typography>
-                </CardContent>
-              </Card>
+              <IconInfoCard icon={item.icon} title={item.title} titleVariant="h5">
+                <Typography color="text.secondary" sx={{ lineHeight: 1.8 }}>
+                  {item.content}
+                </Typography>
+              </IconInfoCard>
             </Grid>
           ))}
         </Grid>
       </Container>
 
-      <Container sx={{ pb: { xs: 4, md: 6 } }}>
-        <SectionIntro
-          eyebrow="External content"
-          title="Maps and third-party embeds stay blocked until they are allowed."
-          description="This is the practical effect of the consent logic: external content is withheld first and only becomes available after explicit opt-in."
-        />
-        <ConsentAwareEmbed />
+      <Container sx={{ pb: { xs: 8, md: 10 } }}>
+        <OpeningHoursAndCallGrid />
       </Container>
 
-      <Container sx={{ pb: { xs: 8, md: 10 } }}>
-        <Card>
-          <CardContent sx={{ p: { xs: 4, md: 5 } }}>
-            <Typography variant="h4" sx={{ mb: 2 }}>
-              Nächste sinnvolle Ausbaustufen
-            </Typography>
-            <Stack spacing={1.5}>
-              <Typography color="text.secondary">Kontaktformular mit DSGVO-Hinweis und Erfolgsmeldung.</Typography>
-              <Typography color="text.secondary">Google-Maps- oder OpenStreetMap-Einbindung für die Anfahrt.</Typography>
-              <Typography color="text.secondary">Deutlich sichtbare Termin-CTA für mobile Besucherinnen und Besucher.</Typography>
-            </Stack>
-            <Button href={`mailto:${practiceInfo.email}`} variant="contained" color="primary" sx={{ mt: 3 }}>
-              E-Mail senden
-            </Button>
-          </CardContent>
-        </Card>
+      <Container sx={{ pb: { xs: 4, md: 6 } }}>
+        <SectionIntro
+          eyebrow="Anfahrt"
+          title="So finden Sie unsere Praxis."
+          description="Die Karte zeigt den Standort unserer Praxis in der Neuherbergstraße 100 in 80937 München. Aus Datenschutzgründen wird sie erst nach Freigabe externer Medien geladen."
+        />
+        <ConsentAwareEmbed embedUrl={googleMapsEmbedUrl} title={`Google Maps: ${practiceAddress}`} height={600} />
       </Container>
     </>
   );

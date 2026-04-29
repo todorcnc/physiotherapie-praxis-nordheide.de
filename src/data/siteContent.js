@@ -17,6 +17,16 @@ export const practiceInfo = {
   note: "Zulassung für alle Kassen. Hausbesuche auf Anfrage möglich.",
 };
 
+export const openingHoursCompact = [
+  { day: "Mo - Do", hours: "08:00 - 12:30 Uhr / 14:00 - 18:00 Uhr" },
+  { day: "Fr", hours: "08:00 - 14:00 Uhr" },
+];
+
+export const appointmentCardContent = {
+  title: "Rufen Sie uns für einen Termin an",
+  text: "Vereinbaren Sie Ihren Termin einfach telefonisch. Wir unterstützen Sie gern bei der passenden Zeit und beantworten Ihre Fragen direkt.",
+};
+
 export const homeHighlights = [
   {
     title: "Ganzheitliche Behandlung",

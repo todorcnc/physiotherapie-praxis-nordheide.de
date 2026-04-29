@@ -63,19 +63,19 @@ const theme = createTheme({
     borderRadius: appThemeConfig.radius.sm,
   },
   typography: {
-    fontFamily: '"Manrope", "Segoe UI", sans-serif',
+    fontFamily: '"Roboto", "Segoe UI", sans-serif',
     h1: {
-      fontFamily: '"Fraunces", Georgia, serif',
+      fontFamily: '"Roboto", "Segoe UI", sans-serif',
       fontWeight: 600,
       letterSpacing: "-0.03em",
     },
     h2: {
-      fontFamily: '"Fraunces", Georgia, serif',
+      fontFamily: '"Roboto", "Segoe UI", sans-serif',
       fontWeight: 600,
       letterSpacing: "-0.02em",
     },
     h3: {
-      fontFamily: '"Fraunces", Georgia, serif',
+      fontFamily: '"Roboto", "Segoe UI", sans-serif',
       fontWeight: 600,
     },
     button: {
