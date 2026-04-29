@@ -25,7 +25,7 @@ function PageHero({ eyebrow, title, description, primaryAction, secondaryAction,
     <Container sx={{ pt: { xs: 6, md: 10 } }}>
       <Box className="hero-shell">
         <Stack direction={{ xs: "column", md: "row" }} spacing={{ xs: 4, md: 6 }} alignItems="center">
-          <Box sx={{ flex: 1 }}>
+          <Box sx={{ flex: 1, minWidth: 0, width: "100%" }}>
             <Chip label={eyebrow} color="secondary" sx={{ mb: 3, color: "secondary.dark", bgcolor: "rgba(201, 140, 73, 0.14)" }} />
             <Typography variant="h1" sx={{ fontSize: { xs: "3rem", md: "4.75rem" }, lineHeight: 1.02, mb: 3 }}>
               {title}
@@ -46,13 +46,23 @@ function PageHero({ eyebrow, title, description, primaryAction, secondaryAction,
               )}
             </Stack>
           </Box>
-          <Box sx={{ flex: 1, width: "100%" }}>
+          <Box
+            sx={{
+              flex: 1,
+              minWidth: 0,
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
             <Box
               component="img"
               src={image}
               alt={imageAlt}
               sx={{
                 width: "100%",
+                maxWidth: 560,
+                height: "auto",
                 display: "block",
                 borderRadius: (theme) => `${theme.app.shell.heroImageRadius}px`,
                 border: "1px solid var(--app-surface-border)",

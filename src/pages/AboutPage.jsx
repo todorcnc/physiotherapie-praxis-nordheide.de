@@ -1,13 +1,35 @@
 import Diversity3RoundedIcon from "@mui/icons-material/Diversity3Rounded";
 import FavoriteBorderRoundedIcon from "@mui/icons-material/FavoriteBorderRounded";
 import PsychologyAltRoundedIcon from "@mui/icons-material/PsychologyAltRounded";
-import { Box, Card, CardContent, Container, Grid, Stack, Typography } from "@mui/material";
+import MedicalServicesRoundedIcon from "@mui/icons-material/MedicalServicesRounded";
+import PersonSearchRoundedIcon from "@mui/icons-material/PersonSearchRounded";
+import SupportAgentRoundedIcon from "@mui/icons-material/SupportAgentRounded";
+import { Box, Card, CardContent, Container, Grid, Stack, Typography, Button } from "@mui/material";
+import { NavLink } from "react-router-dom";
 import { withBase } from "../config/runtime";
 import PageHero from "../components/PageHero";
 import SectionIntro from "../components/SectionIntro";
 import { aboutValues, practiceInfo } from "../data/siteContent";
 
 const icons = [<Diversity3RoundedIcon fontSize="large" />, <PsychologyAltRoundedIcon fontSize="large" />, <FavoriteBorderRoundedIcon fontSize="large" />];
+
+const quickFacts = [
+  {
+    title: "Breites Leistungsspektrum",
+    text: "Zu unseren Behandlungsmöglichkeiten zählen unter anderem Krankengymnastik, manuelle Therapie, Lymphdrainage und weitere physiotherapeutische Anwendungen.",
+    icon: <MedicalServicesRoundedIcon />,
+  },
+  {
+    title: "Durchgehend besetzter Empfang",
+    text: "Wir bemühen uns, auch für komplexe Terminpläne eine gute Lösung zu finden. Unser Team ist für Sie da und unterstützt Sie bei der Terminvereinbarung.",
+    icon: <SupportAgentRoundedIcon />,
+  },
+  {
+    title: "Kompetente Fachkräfte",
+    text: "Unsere qualifizierten Therapeutinnen und Therapeuten begleiten Sie individuell, aufmerksam und mit dem Blick auf eine nachhaltige Verbesserung.",
+    icon: <PersonSearchRoundedIcon />,
+  },
+];
 
 function AboutPage() {
   return (
@@ -45,6 +67,54 @@ function AboutPage() {
             </Grid>
           ))}
         </Grid>
+      </Container>
+
+      <Container sx={{ py: { xs: 8, md: 10 } }}>
+        <SectionIntro
+          eyebrow="Wir kümmern uns um Ihre Gesundheit"
+          title="Was unsere Praxis auszeichnet."
+          description="Klar, persönlich und gut erreichbar: So soll der erste Eindruck unserer Praxis auch online spürbar werden."
+        />
+        <Grid container spacing={3}>
+          {quickFacts.map((item) => (
+            <Grid key={item.title} size={{ xs: 12, md: 4 }}>
+              <Card sx={{ height: "100%" }}>
+                <CardContent sx={{ p: 4 }}>
+                  <Box className="icon-chip">{item.icon}</Box>
+                  <Typography variant="h5" sx={{ mt: 2.5, mb: 1.5 }}>
+                    {item.title}
+                  </Typography>
+                  <Typography color="text.secondary" sx={{ lineHeight: 1.85 }}>
+                    {item.text}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+
+      <Container sx={{ py: { xs: 8, md: 10 } }}>
+        <Box className="cta-panel">
+          <Stack direction={{ xs: "column", md: "row" }} spacing={3} justifyContent="space-between" alignItems={{ xs: "flex-start", md: "center" }}>
+            <Box sx={{ minWidth: 0 }}>
+              <Typography variant="h3" sx={{ mb: 1.5, color: "#fff" }}>
+                Termin vereinbaren oder Rückfrage stellen
+              </Typography>
+              <Typography sx={{ color: "rgba(255,255,255,0.78)", maxWidth: 620, lineHeight: 1.8 }}>
+                Rufen Sie uns direkt unter {practiceInfo.phone} an oder besuchen Sie unsere Kontaktseite für alle wichtigen Informationen auf einen Blick.
+              </Typography>
+            </Box>
+            <Stack direction={{ xs: "column", sm: "row" }} spacing={2} sx={{ width: { xs: "100%", md: "auto" } }}>
+              <Button href={`tel:${practiceInfo.phone.replaceAll(" ", "")}`} variant="contained" color="secondary">
+                Jetzt anrufen
+              </Button>
+              <Button component={NavLink} to="/kontakt" variant="outlined" sx={{ color: "#fff", borderColor: "rgba(255,255,255,0.4)" }}>
+                Kontakt ansehen
+              </Button>
+            </Stack>
+          </Stack>
+        </Box>
       </Container>
 
       <Container sx={{ py: { xs: 2, md: 4 } }}>

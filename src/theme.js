@@ -2,8 +2,8 @@ import { createTheme } from "@mui/material/styles";
 
 const appThemeConfig = {
   layout: {
-    containerMaxWidth: 1200,
-    contentMaxWidth: 720,
+    containerMaxWidth: 1400,
+    contentMaxWidth: 1200,
     gutters: {
       xs: 20,
       sm: 28,
@@ -33,10 +33,8 @@ const appThemeConfig = {
     border: "rgba(13, 110, 110, 0.08)",
     borderStrong: "rgba(13, 110, 110, 0.12)",
     feature: "linear-gradient(135deg, rgba(223, 244, 238, 0.84), rgba(255, 255, 255, 0.9))",
-    hero:
-      "linear-gradient(160deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.76)), linear-gradient(120deg, rgba(223, 244, 238, 0.85), rgba(247, 239, 228, 0.7))",
-    cta:
-      "radial-gradient(circle at top right, rgba(255, 255, 255, 0.12), transparent 22%), linear-gradient(135deg, #0d6e6e 0%, #114f57 100%)",
+    hero: "linear-gradient(160deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.76)), linear-gradient(120deg, rgba(223, 244, 238, 0.85), rgba(247, 239, 228, 0.7))",
+    cta: "radial-gradient(circle at top right, rgba(255, 255, 255, 0.12), transparent 22%), linear-gradient(135deg, #0d6e6e 0%, #114f57 100%)",
   },
 };
 
