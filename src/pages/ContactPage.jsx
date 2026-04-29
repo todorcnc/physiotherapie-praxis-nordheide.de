@@ -4,6 +4,7 @@ import CallRoundedIcon from "@mui/icons-material/CallRounded";
 import LocationOnRoundedIcon from "@mui/icons-material/LocationOnRounded";
 import { Box, Button, Card, CardContent, Container, Grid, Stack, Typography } from "@mui/material";
 import ConsentAwareEmbed from "../components/ConsentAwareEmbed";
+import { withBase } from "../config/runtime";
 import PageHero from "../components/PageHero";
 import SectionIntro from "../components/SectionIntro";
 import { practiceInfo } from "../data/siteContent";
@@ -24,7 +25,7 @@ function ContactPage() {
         description="Die Kontaktdaten stammen aus der bisherigen Website und sind hier in eine klarere, conversion-orientierte Struktur übersetzt."
         primaryAction={{ label: "Jetzt anrufen", href: `tel:${practiceInfo.phone.replaceAll(" ", "")}` }}
         secondaryAction={{ label: "Leistungen ansehen", to: "/leistungen" }}
-        image="/images/hero-placeholder.svg"
+        image={withBase("images/hero-placeholder.svg")}
         imageAlt="Platzhalter für Empfang oder Praxisansicht"
       />
 

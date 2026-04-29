@@ -1,5 +1,6 @@
 import MedicalServicesOutlinedIcon from "@mui/icons-material/MedicalServicesOutlined";
 import { Card, CardContent, Container, Grid, Stack, Typography } from "@mui/material";
+import { withBase } from "../config/runtime";
 import PageHero from "../components/PageHero";
 import SectionIntro from "../components/SectionIntro";
 import { services } from "../data/siteContent";
@@ -13,7 +14,7 @@ function ServicesPage() {
         description="Die Inhalte auf dieser Seite basieren auf den Leistungen der bestehenden Website und sind so verdichtet, dass sie verständlich, hochwertig und vertrauenswürdig wirken."
         primaryAction={{ label: "Termin anfragen", to: "/kontakt" }}
         secondaryAction={{ label: "Über uns", to: "/ueber-uns" }}
-        image="/images/treatment-placeholder.svg"
+        image={withBase("images/treatment-placeholder.svg")}
         imageAlt="Platzhalter für eine Therapieszene"
       />
 

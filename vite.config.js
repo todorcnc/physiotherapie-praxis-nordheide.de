@@ -1,7 +1,23 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import packageJson from "./package.json";
 
-export default defineConfig({
+function getGithubPagesBase() {
+  const homepage = packageJson.homepage;
+
+  if (!homepage) {
+    return "/";
+  }
+
+  try {
+    const { pathname } = new URL(homepage);
+    return pathname.endsWith("/") ? pathname : `${pathname}/`;
+  } catch {
+    return "/";
+  }
+}
+
+export default defineConfig(({ command }) => ({
   plugins: [react()],
-  base: "physiotherapie-praxis-nordheide.de",
-});
+  base: command === "build" ? getGithubPagesBase() : "/",
+}));

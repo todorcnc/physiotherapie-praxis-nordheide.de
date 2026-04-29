@@ -2,6 +2,7 @@ import Diversity3RoundedIcon from "@mui/icons-material/Diversity3Rounded";
 import FavoriteBorderRoundedIcon from "@mui/icons-material/FavoriteBorderRounded";
 import PsychologyAltRoundedIcon from "@mui/icons-material/PsychologyAltRounded";
 import { Box, Card, CardContent, Container, Grid, Stack, Typography } from "@mui/material";
+import { withBase } from "../config/runtime";
 import PageHero from "../components/PageHero";
 import SectionIntro from "../components/SectionIntro";
 import { aboutValues, practiceInfo } from "../data/siteContent";
@@ -17,7 +18,7 @@ function AboutPage() {
         description="Die bisherige Website betont Kompetenz, Empathie und ein engagiertes Team. Diese Seite schafft dafür eine moderne Bühne und Platz für spätere echte Teamfotos und Porträts."
         primaryAction={{ label: "Kontakt aufnehmen", to: "/kontakt" }}
         secondaryAction={{ label: "Leistungen ansehen", to: "/leistungen" }}
-        image="/images/team-placeholder.svg"
+        image={withBase("images/team-placeholder.svg")}
         imageAlt="Platzhalter für ein Teamfoto"
       />
 
@@ -64,7 +65,7 @@ function AboutPage() {
             <Box sx={{ flex: 1, width: "100%" }}>
               <Box
                 component="img"
-                src="/images/team-placeholder.svg"
+                src={withBase("images/team-placeholder.svg")}
                 alt="Platzhalter für zukünftige Teamdarstellung"
                 sx={{ width: "100%", borderRadius: "var(--app-radius-lg)" }}
               />

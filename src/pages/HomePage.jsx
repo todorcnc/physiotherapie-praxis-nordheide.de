@@ -24,7 +24,7 @@ function HomePage() {
         imageAlt="Platzhalter für ein zukünftiges Praxisfoto"
       />
 
-      <Container sx={{ py: { xs: 8, md: 10 } }}>
+      <Container maxWidth="xl" sx={{ py: { xs: 8, md: 10 } }}>
         <Grid container spacing={3}>
           {homeHighlights.map((item, index) => (
             <Grid key={item.title} size={{ xs: 12, md: 4 }}>
@@ -44,7 +44,7 @@ function HomePage() {
         </Grid>
       </Container>
 
-      <Container sx={{ py: { xs: 2, md: 4 } }}>
+      <Container maxWidth="xl" sx={{ py: { xs: 2, md: 4 } }}>
         <Box className="feature-band">
           <SectionIntro
             eyebrow="Willkommen"
@@ -65,13 +65,13 @@ function HomePage() {
               component="img"
               src="/images/treatment-placeholder.svg"
               alt="Platzhalter für ein Behandlungsfoto"
-              sx={{ flex: 1, width: "100%", borderRadius: "var(--app-radius-lg)" }}
+              sx={{ flex: 1, width: "100%", borderRadius: 8 }}
             />
           </Stack>
         </Box>
       </Container>
 
-      <Container sx={{ py: { xs: 8, md: 10 } }}>
+      <Container maxWidth="xl" sx={{ py: { xs: 8, md: 10 } }}>
         <SectionIntro
           eyebrow="Leistungsauszug"
           title="Wichtige Behandlungen auf einen Blick."
@@ -98,7 +98,7 @@ function HomePage() {
         </Grid>
       </Container>
 
-      <Container sx={{ py: { xs: 4, md: 6 } }}>
+      <Container maxWidth="xl" sx={{ py: { xs: 4, md: 6 } }}>
         <Grid container spacing={3}>
           {reviews.map((review) => (
             <Grid key={review.quote} size={{ xs: 12, md: 6 }}>
@@ -118,7 +118,7 @@ function HomePage() {
         </Grid>
       </Container>
 
-      <Container sx={{ py: { xs: 4, md: 6 } }}>
+      <Container maxWidth="xl" sx={{ py: { xs: 4, md: 6 } }}>
         <SectionIntro
           eyebrow="Consent logic"
           title="Optional technologies react to the visitor's choice."
@@ -127,7 +127,7 @@ function HomePage() {
         <ConsentDebugPanel />
       </Container>
 
-      <Container sx={{ py: { xs: 8, md: 10 } }}>
+      <Container maxWidth="xl" sx={{ py: { xs: 8, md: 10 } }}>
         <Box className="cta-panel">
           <Stack direction={{ xs: "column", md: "row" }} spacing={3} justifyContent="space-between" alignItems={{ xs: "flex-start", md: "center" }}>
             <Box>
