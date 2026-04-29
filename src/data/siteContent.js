@@ -13,11 +13,7 @@ export const practiceInfo = {
   phone: "089 461 376 43",
   fax: "089 461 376 45",
   email: "kontakt@physiotherapie-praxis-nordheide.de",
-  hours: [
-    "Mo. - Do.: 08:00 - 13:00 Uhr",
-    "Mo. - Do.: 14:00 - 19:00 Uhr",
-    "Fr.: 08:00 - 14:00 Uhr",
-  ],
+  hours: ["Mo. - Do.: 08:00 - 13:00 Uhr", "Mo. - Do.: 14:00 - 19:00 Uhr", "Fr.: 08:00 - 14:00 Uhr"],
   note: "Zulassung für alle Kassen. Hausbesuche auf Anfrage möglich.",
 };
 
@@ -53,46 +49,77 @@ export const aboutValues = [
 
 export const services = [
   {
-    title: "Krankengymnastik & PNF",
+    title: "KG auf neurophysiologischer Grundlage (PNF) & Krankengymnastik",
     description:
-      "Behandlung zur Verbesserung von Beweglichkeit, Kraft, Koordination und natürlichen Bewegungsmustern auf neurophysiologischer Grundlage.",
+      "Die Krankengymnastik auf neurophysiologischer Grundlage (PNF) ist eine Behandlungsmethode, die durch gezielte Reize die Eigenwahrnehmung stimuliert und das Zusammenspiel von Nerven und Muskeln fördert. Ergänzend hilft die klassische Krankengymnastik dabei, Beweglichkeit, Kraft, Koordination und natürliche Bewegungsmuster individuell aufzubauen und zu sichern.",
+    image: "images/S_1_3.png",
+    imageAlt: "Physiotherapeutische Behandlung mit gezielter Bewegungsführung",
   },
   {
-    title: "Manuelle Therapie & Lymphdrainage",
+    title: "Manuelle Lymphdrainage & Manuelle Therapie",
     description:
-      "Gezielte Techniken zur Behandlung von Gelenkfunktionsstörungen, Schmerzen und Schwellungen.",
+      "Die manuelle Lymphdrainage ist eine sanfte, rhythmische Technik, die den Abtransport gestauter Lymphflüssigkeit unterstützt und Schwellungen reduziert. Die manuelle Therapie nutzt gezielte Mobilisationen und spezielle Handgriffe, um Funktionsstörungen an Gelenken und Wirbelsäule zu behandeln, Schmerzen zu lindern und die Beweglichkeit zu verbessern.",
+    image: "images/S_2_1.png",
+    imageAlt: "Manuelle Therapie an Arm und Schulter",
   },
   {
-    title: "Massage, Triggerpunkte & Fango",
+    title: "Medizinische Massagen, Triggerpunkttherapie & Fango",
     description:
-      "Lösende und vorbereitende Anwendungen für verspannte Muskulatur, schmerzhafte Triggerpunkte und bessere Durchblutung.",
+      "Medizinische Massagen setzen gezielte Druck-, Dehnungs- und Zugreize ein, um verspannte Muskulatur zu lockern, die Durchblutung zu fördern und Schmerzen zu lindern. Die Triggerpunkttherapie konzentriert sich auf lokale Verhärtungen in der Muskulatur, während Fango durch wohltuende Tiefenwärme die Behandlung vorbereitet und den Stoffwechsel anregt.",
+    image: "images/S_3_3.png",
+    imageAlt: "Massage und vorbereitende Wärmeanwendung",
   },
   {
-    title: "Schlingentisch & Wärme/Kälte",
+    title: "Triggerpunkttherapie & Schlingentisch",
     description:
-      "Entlastende Behandlungsformen mit dosierter Bewegung sowie ergänzende Wärme- oder Kälteanwendungen.",
+      "Die Triggerpunkttherapie dient dazu, schmerzhafte myofasziale Punkte gezielt zu behandeln und muskuläre Beschwerden zu lindern. Der Schlingentisch ermöglicht es, Körperabschnitte entlastet zu bewegen, Gelenke zu schonen und Bewegungen unter reduzierter Belastung kontrolliert auszuführen.",
+    image: "images/S_4_1.png",
+    imageAlt: "Therapie an einem Schlingentisch",
   },
   {
-    title: "Ultraschall & Elektrotherapie",
+    title: "Neurologische Physiotherapie / KG-ZNS nach PNF",
     description:
-      "Physikalische Therapie zur Schmerzlinderung, Stimulation und Unterstützung von Heilungsprozessen.",
+      "Die neurologische Physiotherapie richtet sich an Menschen mit Einschränkungen des zentralen Nervensystems. Mit KG-ZNS nach PNF werden funktionelle Bewegungsmuster gezielt erleichtert, damit Alltagsbewegungen, Stabilität und Körperkontrolle bestmöglich gefördert werden.",
+    image: "images/S_5_1.png",
+    imageAlt: "Neurologische Physiotherapie mit therapeutischer Begleitung",
   },
   {
-    title: "Kinesiologisches Taping",
+    title: "Skoliose-Therapie nach Katharina Schroth",
     description:
-      "Elastische Tape-Anlagen zur Unterstützung von Muskeln, Gelenken und Lymphfluss im Alltag und beim Training.",
+      "Die Skoliose-Therapie nach Katharina Schroth ist ein spezialisierter Ansatz für Menschen mit Wirbelsäulenverkrümmungen. Mit individuell angepassten Korrekturübungen, gezielter Atemlenkung und bewusster Haltungsschulung wird die Aufrichtung des Körpers unterstützt und die Eigenwahrnehmung verbessert.",
+    image: "images/img_6.jpg",
+    imageAlt: "Spezialisierte Therapie zur Haltungskorrektur",
+  },
+  {
+    title: "Heiße Rolle, Wärmepackung, Naturmoor & Heißluft",
+    description:
+      "Wärmetherapeutische Anwendungen wie Heiße Rolle, Wärmepackungen, Naturmoor oder Heißluft dienen dazu, Muskulatur zu lockern, die Durchblutung anzuregen und das Gewebe auf weitere therapeutische Maßnahmen vorzubereiten. Sie werden gezielt eingesetzt, um Schmerzen zu lindern und das allgemeine Wohlbefinden zu steigern.",
+    image: "images/img_7.jpg",
+    imageAlt: "Wärmetherapie in der Physiotherapie",
+  },
+  {
+    title: "Kältetherapie & Ultraschall",
+    description:
+      "Die Kältetherapie wird eingesetzt, um Schmerzen und Entzündungen zu lindern, Schwellungen zu reduzieren und die Muskelspannung herabzusetzen. Ultraschall ergänzt die Behandlung mit tiefenwirksamen Schallwellen, die Heilungsprozesse unterstützen, das Gewebe stimulieren und lokal fördern können.",
+    image: "images/img_8.jpg",
+    imageAlt: "Physikalische Therapie mit Ultraschall und Kälte",
+  },
+  {
+    title: "Elektrotherapie, funktionelle Elektrostimulation & Kinesiologisches Taping",
+    description:
+      "Die Elektrotherapie nutzt verschiedene Stromformen, um Schmerzen zu lindern, Muskeln zu stimulieren und die Durchblutung zu verbessern. Die funktionelle Elektrostimulation kann gezielt bei neurologischen oder muskulären Einschränkungen eingesetzt werden, während kinesiologisches Taping Muskeln, Gelenke und den Lymphfluss im Alltag zusätzlich unterstützt.",
+    image: "images/img_9.jpg",
+    imageAlt: "Elektrotherapie und Tape-Anwendungen",
   },
 ];
 
 export const reviews = [
   {
-    quote:
-      "Sehr kompetente Therapeuten, freundlich und hilfsbereit. Ich bin seit Jahren Patientin und wurde immer sehr gut behandelt.",
+    quote: "Sehr kompetente Therapeuten, freundlich und hilfsbereit. Ich bin seit Jahren Patientin und wurde immer sehr gut behandelt.",
     author: "Google-Rezension",
   },
   {
-    quote:
-      "Kompetente und höfliche Praxis mit viel Geduld und Zeit. Ich fühle mich dort sehr wohl.",
+    quote: "Kompetente und höfliche Praxis mit viel Geduld und Zeit. Ich fühle mich dort sehr wohl.",
     author: "Google-Rezension",
   },
 ];

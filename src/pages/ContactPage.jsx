@@ -19,22 +19,8 @@ const contactItems = [
 function ContactPage() {
   return (
     <>
-      <PageHero
-        eyebrow="Kontakt"
-        title="Schnell erreichbar für Terminwünsche und Rückfragen."
-        description="Die Kontaktdaten stammen aus der bisherigen Website und sind hier in eine klarere, conversion-orientierte Struktur übersetzt."
-        primaryAction={{ label: "Jetzt anrufen", href: `tel:${practiceInfo.phone.replaceAll(" ", "")}` }}
-        secondaryAction={{ label: "Leistungen ansehen", to: "/leistungen" }}
-        image={withBase("images/hero-placeholder.svg")}
-        imageAlt="Platzhalter für Empfang oder Praxisansicht"
-      />
-
       <Container sx={{ py: { xs: 8, md: 10 } }}>
-        <SectionIntro
-          eyebrow="Kontaktinfos"
-          title="Alle wichtigen Angaben an einem Ort."
-          description="Für die finale Version kann hier zusätzlich eine eingebettete Karte, ein Kontaktformular oder eine Terminbuchung ergänzt werden."
-        />
+        <SectionIntro eyebrow="Kontaktinfos" title="Alle wichtigen Angaben an einem Ort." />
         <Grid container spacing={3}>
           {contactItems.map((item) => (
             <Grid key={item.title} size={{ xs: 12, md: 6 }}>
