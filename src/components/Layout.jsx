@@ -4,6 +4,7 @@ import { AppBar, Box, Button, Container, Drawer, IconButton, List, ListItemButto
 import { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { useConsent } from "../context/ConsentContext";
+import { withBase } from "../config/runtime";
 import { navigationItems, practiceInfo } from "../data/siteContent";
 import CookieBanner from "./CookieBanner";
 import CookieSettingsButton from "./CookieSettingsButton";
@@ -33,15 +34,20 @@ function Layout() {
         <Container>
           <Toolbar disableGutters sx={{ minHeight: 84 }}>
             <Stack direction="row" spacing={1.5} alignItems="center" sx={{ flexGrow: 1 }}>
-              <Box className="brand-mark" />
-              <Box>
+              <Box
+                component="img"
+                src={withBase(practiceInfo.logo)}
+                alt={`${practiceInfo.name} Logo`}
+                sx={{ width: "130px", borderRadius: "var(--app-radius-lg)" }}
+              />
+              {/* <Box>
                 <Typography variant="subtitle2" sx={{ letterSpacing: "0.16em", textTransform: "uppercase", color: "primary.main" }}>
                   München Nordheide
                 </Typography>
                 <Typography variant="h6" sx={{ fontFamily: '"Fraunces", Georgia, serif' }}>
                   {practiceInfo.name}
                 </Typography>
-              </Box>
+              </Box> */}
             </Stack>
 
             <Stack direction="row" spacing={4} alignItems="center" sx={{ display: { xs: "none", md: "flex" } }}>
@@ -50,9 +56,9 @@ function Layout() {
                   {item.label}
                 </NavLink>
               ))}
-              <Button component={NavLink} to="/kontakt" variant="contained" color="primary" startIcon={<PhoneInTalkRoundedIcon />}>
+              {/* <Button component={NavLink} to="/kontakt" variant="contained" color="primary" startIcon={<PhoneInTalkRoundedIcon />}>
                 Termin anfragen
-              </Button>
+              </Button> */}
             </Stack>
 
             <IconButton sx={{ display: { xs: "inline-flex", md: "none" } }} onClick={() => setMobileOpen(true)} aria-label="Menü öffnen">

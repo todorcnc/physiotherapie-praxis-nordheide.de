@@ -7,6 +7,7 @@ export const navigationItems = [
 
 export const practiceInfo = {
   name: "Physiotherapie Praxis Nordheide",
+  logo: "images/logo.png",
   tagline: "Individuelle Therapie für mehr Beweglichkeit, Stabilität und Lebensqualität.",
   addressLine1: "Neuherbergstr. 100",
   addressLine2: "80937 München",

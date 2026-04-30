@@ -19,7 +19,7 @@ function HomePage() {
           <Stack direction={{ xs: "column", md: "row" }} spacing={4} alignItems="center">
             <Box
               component="img"
-              src={withBase("images/Rezeption.webp")}
+              src={withBase("images/Rezeption.png")}
               alt="Empfangsbereich der Praxis"
               sx={{ width: "100%", display: "block", borderRadius: "var(--app-radius-lg)" }}
             />
@@ -45,14 +45,12 @@ function HomePage() {
             >
               <Stack spacing={2.5}>
                 <Typography color="text.secondary" sx={{ lineHeight: 1.9 }}>
-                  In unserer Praxis erwartet Sie eine persönliche Betreuung in angenehmer Atmosphäre. Unsere
-                  Behandlungen finden in modernen, separaten Räumen statt, damit Sie sich gut aufgehoben
-                  fühlen und Ihre Therapie in ruhiger Umgebung stattfinden kann.
+                  In unserer Praxis erwartet Sie eine persönliche Betreuung in angenehmer Atmosphäre. Unsere Behandlungen finden in modernen, separaten Räumen
+                  statt, damit Sie sich gut aufgehoben fühlen und Ihre Therapie in ruhiger Umgebung stattfinden kann.
                 </Typography>
                 <Typography color="text.secondary" sx={{ lineHeight: 1.9 }}>
-                  Um Wartezeiten zu vermeiden und Ihnen eine optimale Betreuung zu ermöglichen, bitten wir Sie,
-                  Termine vorab telefonisch zu vereinbaren. Sollten Sie einen vereinbarten Termin einmal nicht
-                  wahrnehmen können, sagen Sie diesen bitte rechtzeitig ab.
+                  Um Wartezeiten zu vermeiden und Ihnen eine optimale Betreuung zu ermöglichen, bitten wir Sie, Termine vorab telefonisch zu vereinbaren.
+                  Sollten Sie einen vereinbarten Termin einmal nicht wahrnehmen können, sagen Sie diesen bitte rechtzeitig ab.
                 </Typography>
                 <Typography color="text.secondary" sx={{ lineHeight: 1.9 }}>
                   Wir freuen uns darauf, Sie in unserer Praxis begrüßen zu dürfen.
@@ -61,12 +59,7 @@ function HomePage() {
               </Stack>
 
               <Stack direction={{ xs: "column", sm: "row" }} spacing={2} sx={{ mt: 4 }}>
-                <Button
-                  href={`tel:${practiceInfo.phone.replaceAll(" ", "")}`}
-                  variant="contained"
-                  color="primary"
-                  startIcon={<CallRoundedIcon />}
-                >
+                <Button href={`tel:${practiceInfo.phone.replaceAll(" ", "")}`} variant="contained" color="primary" startIcon={<CallRoundedIcon />}>
                   Jetzt anrufen
                 </Button>
                 <Button component={NavLink} to="/kontakt" variant="outlined" color="primary">
