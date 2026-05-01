@@ -1,7 +1,6 @@
 import MedicalServicesOutlinedIcon from "@mui/icons-material/MedicalServicesOutlined";
 import { Box, Card, CardContent, Container, Grid, Stack, Typography } from "@mui/material";
 import { withBase } from "../config/runtime";
-import PageHero from "../components/PageHero";
 import SectionIntro from "../components/SectionIntro";
 import { services } from "../data/siteContent";
 
@@ -11,8 +10,8 @@ function ServicesPage() {
       <Container sx={{ py: { xs: 8, md: 10 } }}>
         <SectionIntro
           eyebrow="Leistungen"
-          title="Die passende Therapie für Ihre Bedürfnisse"
-          description="Unsere Praxis bietet Ihnen ein vielseitiges Spektrum an physiotherapeutischen Behandlungen auf höchstem fachlichen Niveau."
+          title="Behandlungsangebot"
+          description="Hier finden Sie unser gesamtes physiotherapeutisches Behandlungsangebot in einer klaren Übersicht."
         />
 
         <Grid container spacing={3}>

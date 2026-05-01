@@ -60,67 +60,95 @@ export const aboutValues = [
 
 export const services = [
   {
-    title: "KG auf neurophysiologischer Grundlage (PNF) & Krankengymnastik",
+    title: "Krankengymnastik",
     description:
-      "Die Krankengymnastik auf neurophysiologischer Grundlage (PNF) ist eine Behandlungsmethode, die durch gezielte Reize die Eigenwahrnehmung stimuliert und das Zusammenspiel von Nerven und Muskeln fördert. Ergänzend hilft die klassische Krankengymnastik dabei, Beweglichkeit, Kraft, Koordination und natürliche Bewegungsmuster individuell aufzubauen und zu sichern.",
+      "Die Krankengymnastik ist eine zentrale physiotherapeutische Behandlung zur Verbesserung von Beweglichkeit, Kraft, Koordination und Körperfunktion. Mit gezielten Übungen und individuell abgestimmten Bewegungsabläufen unterstützen wir Sie dabei, Schmerzen zu reduzieren, Bewegungsdefizite auszugleichen und Ihre Belastbarkeit im Alltag nachhaltig zu steigern.",
     image: "images/S_1_3.png",
     imageAlt: "Physiotherapeutische Behandlung mit gezielter Bewegungsführung",
   },
   {
-    title: "Manuelle Lymphdrainage & Manuelle Therapie",
+    title: "Manuelle Therapie",
     description:
-      "Die manuelle Lymphdrainage ist eine sanfte, rhythmische Technik, die den Abtransport gestauter Lymphflüssigkeit unterstützt und Schwellungen reduziert. Die manuelle Therapie nutzt gezielte Mobilisationen und spezielle Handgriffe, um Funktionsstörungen an Gelenken und Wirbelsäule zu behandeln, Schmerzen zu lindern und die Beweglichkeit zu verbessern.",
+      "Die manuelle Therapie ist eine spezialisierte Form der Physiotherapie, bei der Funktionsstörungen an Gelenken, Muskeln und Nerven mit gezielten Handgriffen untersucht und behandelt werden. Durch sanfte Mobilisationen und präzise Techniken können Schmerzen gelindert, Blockaden gelöst und natürliche Bewegungsabläufe wieder verbessert werden.",
     image: "images/S_2_1.png",
     imageAlt: "Manuelle Therapie an Arm und Schulter",
   },
   {
-    title: "Medizinische Massagen, Triggerpunkttherapie & Fango",
+    title: "Neurologische Physiotherapie-KG-ZNSn.PNF",
     description:
-      "Medizinische Massagen setzen gezielte Druck-, Dehnungs- und Zugreize ein, um verspannte Muskulatur zu lockern, die Durchblutung zu fördern und Schmerzen zu lindern. Die Triggerpunkttherapie konzentriert sich auf lokale Verhärtungen in der Muskulatur, während Fango durch wohltuende Tiefenwärme die Behandlung vorbereitet und den Stoffwechsel anregt.",
-    image: "images/S_3_3.png",
-    imageAlt: "Massage und vorbereitende Wärmeanwendung",
-  },
-  {
-    title: "Triggerpunkttherapie & Schlingentisch",
-    description:
-      "Die Triggerpunkttherapie dient dazu, schmerzhafte myofasziale Punkte gezielt zu behandeln und muskuläre Beschwerden zu lindern. Der Schlingentisch ermöglicht es, Körperabschnitte entlastet zu bewegen, Gelenke zu schonen und Bewegungen unter reduzierter Belastung kontrolliert auszuführen.",
-    image: "images/S_4_1.png",
-    imageAlt: "Therapie an einem Schlingentisch",
-  },
-  {
-    title: "Neurologische Physiotherapie / KG-ZNS nach PNF",
-    description:
-      "Die neurologische Physiotherapie richtet sich an Menschen mit Einschränkungen des zentralen Nervensystems. Mit KG-ZNS nach PNF werden funktionelle Bewegungsmuster gezielt erleichtert, damit Alltagsbewegungen, Stabilität und Körperkontrolle bestmöglich gefördert werden.",
+      "Diese Behandlungsform richtet sich an Menschen mit neurologischen Erkrankungen oder Störungen des zentralen Nervensystems. Mit therapeutischen Reizen nach PNF werden Bewegung, Haltung, Gleichgewicht, Muskelspannung und Koordination gezielt gefördert, um alltagsrelevante Funktionen bestmöglich zu erhalten oder neu aufzubauen.",
     image: "images/S_5_1.png",
     imageAlt: "Neurologische Physiotherapie mit therapeutischer Begleitung",
   },
   {
-    title: "Skoliose-Therapie nach Katharina Schroth",
+    title: "Lymphdrainage",
     description:
-      "Die Skoliose-Therapie nach Katharina Schroth ist ein spezialisierter Ansatz für Menschen mit Wirbelsäulenverkrümmungen. Mit individuell angepassten Korrekturübungen, gezielter Atemlenkung und bewusster Haltungsschulung wird die Aufrichtung des Körpers unterstützt und die Eigenwahrnehmung verbessert.",
+      "Die manuelle Lymphdrainage ist eine sanfte, rhythmische Behandlungstechnik zur Anregung des Lymphflusses. Sie wird vor allem bei Schwellungen, Ödemen und postoperativen Belastungszuständen eingesetzt und unterstützt den Abtransport von Gewebsflüssigkeit, wodurch das Gewebe entlastet und der Heilungsverlauf positiv begleitet werden kann.",
+    image: "images/S_2_1.png",
+    imageAlt: "Lymphdrainage und sanfte manuelle Behandlung",
+  },
+  {
+    title: "Medizinische Massagen",
+    description:
+      "Medizinische Massagen dienen nicht nur der Entspannung, sondern sind eine gezielte therapeutische Maßnahme bei muskulären Verspannungen und schmerzhaften Belastungszuständen. Sie fördern die Durchblutung, lockern das Gewebe und unterstützen die Regeneration, sodass sich das körperliche Wohlbefinden und die Beweglichkeit spürbar verbessern können.",
+    image: "images/S_3_3.png",
+    imageAlt: "Medizinische Massage in der Physiotherapie",
+  },
+  {
+    title: "Dreidimensionale Skoliose Therapie nach Katharina Schroth",
+    description:
+      "Die dreidimensionale Skoliose-Therapie nach Katharina Schroth ist ein spezialisiertes Behandlungskonzept bei Wirbelsäulenverkrümmungen. Durch gezielte Korrekturübungen, Atemlenkung und Haltungsschulung wird daran gearbeitet, die Aufrichtung des Körpers zu verbessern, muskuläre Dysbalancen auszugleichen und das Bewusstsein für eine günstige Körperhaltung im Alltag zu stärken.",
     image: "images/img_6.jpg",
     imageAlt: "Spezialisierte Therapie zur Haltungskorrektur",
   },
   {
-    title: "Heiße Rolle, Wärmepackung, Naturmoor & Heißluft",
+    title: "Wärmetherapie (Heißluft, Fango mit Naturmoor,Heiße Rolle)",
     description:
-      "Wärmetherapeutische Anwendungen wie Heiße Rolle, Wärmepackungen, Naturmoor oder Heißluft dienen dazu, Muskulatur zu lockern, die Durchblutung anzuregen und das Gewebe auf weitere therapeutische Maßnahmen vorzubereiten. Sie werden gezielt eingesetzt, um Schmerzen zu lindern und das allgemeine Wohlbefinden zu steigern.",
+      "Wärmeanwendungen wie Heißluft, Fango mit Naturmoor oder die Heiße Rolle werden eingesetzt, um verspannte Muskulatur gezielt zu lockern und die Durchblutung anzuregen. Sie wirken schmerzlindernd, bereiten das Gewebe auf weitere physiotherapeutische Maßnahmen vor und eignen sich besonders bei Rücken-, Gelenk- und Muskelbeschwerden.",
     image: "images/img_7.jpg",
     imageAlt: "Wärmetherapie in der Physiotherapie",
   },
   {
-    title: "Kältetherapie & Ultraschall",
+    title: "Kältetherapie-Eis",
     description:
-      "Die Kältetherapie wird eingesetzt, um Schmerzen und Entzündungen zu lindern, Schwellungen zu reduzieren und die Muskelspannung herabzusetzen. Ultraschall ergänzt die Behandlung mit tiefenwirksamen Schallwellen, die Heilungsprozesse unterstützen, das Gewebe stimulieren und lokal fördern können.",
+      "Die Kältetherapie mit Eis ist eine bewährte Maßnahme bei akuten Reizzuständen, Entzündungen und Schwellungen. Durch den gezielten Kältereiz können Schmerzen reduziert, überschießende Entzündungsreaktionen gedämpft und das Gewebe nach Verletzungen oder Überlastungen wirksam beruhigt werden.",
     image: "images/img_8.jpg",
-    imageAlt: "Physikalische Therapie mit Ultraschall und Kälte",
+    imageAlt: "Kältetherapie mit Eis",
   },
   {
-    title: "Elektrotherapie, funktionelle Elektrostimulation & Kinesiologisches Taping",
+    title: "Elektrotherapie (elektrostimulation bei Fazialisparese)",
     description:
-      "Die Elektrotherapie nutzt verschiedene Stromformen, um Schmerzen zu lindern, Muskeln zu stimulieren und die Durchblutung zu verbessern. Die funktionelle Elektrostimulation kann gezielt bei neurologischen oder muskulären Einschränkungen eingesetzt werden, während kinesiologisches Taping Muskeln, Gelenke und den Lymphfluss im Alltag zusätzlich unterstützt.",
+      "Die Elektrotherapie nutzt unterschiedliche Stromformen, um Schmerzen zu lindern, die Durchblutung zu fördern, Heilungsprozesse zu unterstützen und geschwächte Muskulatur gezielt zu stimulieren. Sie wird unter anderem bei Muskelverspannungen, Rücken- und Gelenkbeschwerden, Sportverletzungen sowie ergänzend zur Elektrostimulation bei Fazialisparese eingesetzt.",
     image: "images/img_9.jpg",
-    imageAlt: "Elektrotherapie und Tape-Anwendungen",
+    imageAlt: "Elektrotherapie und Elektrostimulation",
+  },
+  {
+    title: "Ultraschall",
+    description:
+      "Die Ultraschalltherapie arbeitet mit hochfrequenten Schallwellen, die tief in das Gewebe eindringen und dort stoffwechselanregend sowie lockernd wirken können. Sie unterstützt die Behandlung von Muskel- und Sehnenbeschwerden, fördert die Regeneration nach Überlastungen und kann bei schmerzhaften Verhärtungen oder entzündlichen Reizzuständen sinnvoll ergänzend eingesetzt werden.",
+    image: "images/img_8.jpg",
+    imageAlt: "Ultraschallbehandlung in der Physiotherapie",
+  },
+  {
+    title: "Extension-Schlingentisch",
+    description:
+      "Der Extension-Schlingentisch ermöglicht eine besonders entlastende Lagerung, bei der einzelne Körperabschnitte in Schlingen aufgehängt werden. So können Bewegungen unter reduzierter Schwerkraft ausgeführt, Gelenke geschont und durch sanfte Traktion Druck auf Wirbelsäule oder Gelenkstrukturen verringert werden, was vor allem bei schmerzhaften Bewegungseinschränkungen hilfreich ist.",
+    image: "images/S_4_1.png",
+    imageAlt: "Behandlung am Extension-Schlingentisch",
+  },
+  {
+    title: "Schröpfen",
+    description:
+      "Schröpfen ist eine ergänzende Behandlungsmethode, bei der mit speziellen Schröpfgläsern ein gezielter Unterdruck auf der Haut erzeugt wird. Dadurch können die Durchblutung angeregt, muskuläre Spannungen gelöst und lokale Stoffwechselprozesse aktiviert werden, was insbesondere bei hartnäckigen Verspannungen als unterstützende Maßnahme eingesetzt wird.",
+    image: "images/S_3_3.png",
+    imageAlt: "Schröpfbehandlung als ergänzende Therapie",
+  },
+  {
+    title: "Kompressionstherapie mit Lympha-mat",
+    description:
+      "Die apparative Kompressionstherapie mit Lympha-mat arbeitet mit gradierter, intermittierender Druckwellenbehandlung über mehrkammerige Manschetten. Sie unterstützt den Abtransport von Gewebsflüssigkeit, kann lymphatische und venöse Stauungen gezielt entlasten und wird ergänzend zur Behandlung von Ödemen eingesetzt, um Schwellungen spürbar zu reduzieren.",
+    image: "images/S_2_1.png",
+    imageAlt: "Kompressionstherapie mit apparativer Unterstützung",
   },
 ];
 
