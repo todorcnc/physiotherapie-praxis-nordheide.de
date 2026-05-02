@@ -130,6 +130,13 @@ export const services = [
     imageAlt: "Ultraschallbehandlung in der Physiotherapie",
   },
   {
+    title: "Scanlab-Therapie",
+    description:
+      "Die Scanlab-Therapie ist eine effektive Tiefenwärmebehandlung zur Unterstützung bei Schmerzen und Verletzungen des Bewegungsapparates. Durch lokal erzeugte, tiefenwirksame Wärme werden die Durchblutung gefördert, das Gewebe elastischer gemacht und muskuläre sowie fasziale Spannungen gezielt entlastet.",
+    image: "images/img_7.jpg",
+    imageAlt: "Tiefenwärmetherapie mit Scanlab",
+  },
+  {
     title: "Extension-Schlingentisch",
     description:
       "Der Extension-Schlingentisch ermöglicht eine besonders entlastende Lagerung, bei der einzelne Körperabschnitte in Schlingen aufgehängt werden. So können Bewegungen unter reduzierter Schwerkraft ausgeführt, Gelenke geschont und durch sanfte Traktion Druck auf Wirbelsäule oder Gelenkstrukturen verringert werden, was vor allem bei schmerzhaften Bewegungseinschränkungen hilfreich ist.",
