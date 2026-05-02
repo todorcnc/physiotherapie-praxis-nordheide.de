@@ -133,7 +133,7 @@ export const services = [
     title: "Scanlab-Therapie",
     description:
       "Die Scanlab-Therapie ist eine effektive Tiefenwärmebehandlung zur Unterstützung bei Schmerzen und Verletzungen des Bewegungsapparates. Durch lokal erzeugte, tiefenwirksame Wärme werden die Durchblutung gefördert, das Gewebe elastischer gemacht und muskuläre sowie fasziale Spannungen gezielt entlastet.",
-    image: "images/img_7.jpg",
+    image: "images/skanlab.png",
     imageAlt: "Tiefenwärmetherapie mit Scanlab",
   },
   {
@@ -147,14 +147,14 @@ export const services = [
     title: "Schröpfen",
     description:
       "Schröpfen ist eine ergänzende Behandlungsmethode, bei der mit speziellen Schröpfgläsern ein gezielter Unterdruck auf der Haut erzeugt wird. Dadurch können die Durchblutung angeregt, muskuläre Spannungen gelöst und lokale Stoffwechselprozesse aktiviert werden, was insbesondere bei hartnäckigen Verspannungen als unterstützende Maßnahme eingesetzt wird.",
-    image: "images/S_3_3.png",
+    image: "images/schropfen.png",
     imageAlt: "Schröpfbehandlung als ergänzende Therapie",
   },
   {
     title: "Kompressionstherapie mit Lympha-mat",
     description:
       "Die apparative Kompressionstherapie mit Lympha-mat arbeitet mit gradierter, intermittierender Druckwellenbehandlung über mehrkammerige Manschetten. Sie unterstützt den Abtransport von Gewebsflüssigkeit, kann lymphatische und venöse Stauungen gezielt entlasten und wird ergänzend zur Behandlung von Ödemen eingesetzt, um Schwellungen spürbar zu reduzieren.",
-    image: "images/S_2_1.png",
+    image: "images/lympha_mat.png",
     imageAlt: "Kompressionstherapie mit apparativer Unterstützung",
   },
 ];
