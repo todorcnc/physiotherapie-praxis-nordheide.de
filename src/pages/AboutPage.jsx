@@ -11,12 +11,12 @@ const strengths = [
 
 const cabinetImages = [
   { src: "images/Rezeption.png", alt: "Rezeption der Physiotherapie Praxis Nordheide" },
-  { src: "images/2.jpeg", alt: "Einblick in den Eingangsbereich der Praxis" },
-  { src: "images/3.jpeg", alt: "Therapieraum der Praxis" },
-  { src: "images/4.jpeg", alt: "Moderner Behandlungsraum" },
-  { src: "images/5.jpeg", alt: "Praxisraum der Physiotherapie Praxis Nordheide" },
-  { src: "images/6.jpeg", alt: "Behandlungsbereich der Praxis" },
-  { src: "images/7.jpeg", alt: "Weiterer Eindruck aus den Praxisräumen" },
+  { src: "images/praxis_images/praxis_6.png", alt: "Einblick in den Eingangsbereich der Praxis" },
+  { src: "images/praxis_images/praxis_5.png", alt: "Einblick in den Eingangsbereich der Praxis" },
+  { src: "images/praxis_images/praxis_2.png", alt: "Moderner Behandlungsraum" },
+  { src: "images/praxis_images/praxis_4.png", alt: "Praxisraum der Physiotherapie Praxis Nordheide" },
+  { src: "images/praxis_images/praxis_1.png", alt: "Behandlungsbereich der Praxis" },
+  { src: "images/praxis_images/praxis_3.png", alt: "Weiterer Eindruck aus den Praxisräumen" },
 ];
 
 function AboutPage() {

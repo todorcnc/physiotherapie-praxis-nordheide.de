@@ -63,21 +63,21 @@ export const services = [
     title: "Krankengymnastik",
     description:
       "Die Krankengymnastik ist eine zentrale physiotherapeutische Behandlung zur Verbesserung von Beweglichkeit, Kraft, Koordination und Körperfunktion. Mit gezielten Übungen und individuell abgestimmten Bewegungsabläufen unterstützen wir Sie dabei, Schmerzen zu reduzieren, Bewegungsdefizite auszugleichen und Ihre Belastbarkeit im Alltag nachhaltig zu steigern.",
-    image: "images/S_1_3.png",
+    image: "images/therapy_services/krankengymnastik.png",
     imageAlt: "Physiotherapeutische Behandlung mit gezielter Bewegungsführung",
   },
   {
     title: "Manuelle Therapie",
     description:
       "Die manuelle Therapie ist eine spezialisierte Form der Physiotherapie, bei der Funktionsstörungen an Gelenken, Muskeln und Nerven mit gezielten Handgriffen untersucht und behandelt werden. Durch sanfte Mobilisationen und präzise Techniken können Schmerzen gelindert, Blockaden gelöst und natürliche Bewegungsabläufe wieder verbessert werden.",
-    image: "images/S_2_1.png",
+    image: "images/therapy_services/manuelle_therapie.png",
     imageAlt: "Manuelle Therapie an Arm und Schulter",
   },
   {
     title: "Neurologische Physiotherapie-KG-ZNSn.PNF",
     description:
       "Diese Behandlungsform richtet sich an Menschen mit neurologischen Erkrankungen oder Störungen des zentralen Nervensystems. Mit therapeutischen Reizen nach PNF werden Bewegung, Haltung, Gleichgewicht, Muskelspannung und Koordination gezielt gefördert, um alltagsrelevante Funktionen bestmöglich zu erhalten oder neu aufzubauen.",
-    image: "images/S_5_1.png",
+    image: null,
     imageAlt: "Neurologische Physiotherapie mit therapeutischer Begleitung",
   },
   {
@@ -133,7 +133,7 @@ export const services = [
     title: "Scanlab-Therapie",
     description:
       "Die Scanlab-Therapie ist eine effektive Tiefenwärmebehandlung zur Unterstützung bei Schmerzen und Verletzungen des Bewegungsapparates. Durch lokal erzeugte, tiefenwirksame Wärme werden die Durchblutung gefördert, das Gewebe elastischer gemacht und muskuläre sowie fasziale Spannungen gezielt entlastet.",
-    image: "images/skanlab.png",
+    image: "images/therapy_services/skanlab.png",
     imageAlt: "Tiefenwärmetherapie mit Scanlab",
   },
   {
@@ -147,14 +147,14 @@ export const services = [
     title: "Schröpfen",
     description:
       "Schröpfen ist eine ergänzende Behandlungsmethode, bei der mit speziellen Schröpfgläsern ein gezielter Unterdruck auf der Haut erzeugt wird. Dadurch können die Durchblutung angeregt, muskuläre Spannungen gelöst und lokale Stoffwechselprozesse aktiviert werden, was insbesondere bei hartnäckigen Verspannungen als unterstützende Maßnahme eingesetzt wird.",
-    image: "images/schropfen.png",
+    image: "images/therapy_services/schropfen.png",
     imageAlt: "Schröpfbehandlung als ergänzende Therapie",
   },
   {
     title: "Kompressionstherapie mit Lympha-mat",
     description:
       "Die apparative Kompressionstherapie mit Lympha-mat arbeitet mit gradierter, intermittierender Druckwellenbehandlung über mehrkammerige Manschetten. Sie unterstützt den Abtransport von Gewebsflüssigkeit, kann lymphatische und venöse Stauungen gezielt entlasten und wird ergänzend zur Behandlung von Ödemen eingesetzt, um Schwellungen spürbar zu reduzieren.",
-    image: "images/lympha_mat.png",
+    image: "images/therapy_services/lympha_mat.png",
     imageAlt: "Kompressionstherapie mit apparativer Unterstützung",
   },
 ];
