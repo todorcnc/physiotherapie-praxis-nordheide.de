@@ -77,56 +77,56 @@ export const services = [
     title: "Neurologische Physiotherapie-KG-ZNSn.PNF",
     description:
       "Diese Behandlungsform richtet sich an Menschen mit neurologischen Erkrankungen oder Störungen des zentralen Nervensystems. Mit therapeutischen Reizen nach PNF werden Bewegung, Haltung, Gleichgewicht, Muskelspannung und Koordination gezielt gefördert, um alltagsrelevante Funktionen bestmöglich zu erhalten oder neu aufzubauen.",
-    image: null,
+    image: "images/therapy_services/pnf.png",
     imageAlt: "Neurologische Physiotherapie mit therapeutischer Begleitung",
   },
   {
     title: "Lymphdrainage",
     description:
       "Die manuelle Lymphdrainage ist eine sanfte, rhythmische Behandlungstechnik zur Anregung des Lymphflusses. Sie wird vor allem bei Schwellungen, Ödemen und postoperativen Belastungszuständen eingesetzt und unterstützt den Abtransport von Gewebsflüssigkeit, wodurch das Gewebe entlastet und der Heilungsverlauf positiv begleitet werden kann.",
-    image: "images/S_2_1.png",
+    image: "images/therapy_services/lymphdrainage.png",
     imageAlt: "Lymphdrainage und sanfte manuelle Behandlung",
   },
   {
     title: "Medizinische Massagen",
     description:
       "Medizinische Massagen dienen nicht nur der Entspannung, sondern sind eine gezielte therapeutische Maßnahme bei muskulären Verspannungen und schmerzhaften Belastungszuständen. Sie fördern die Durchblutung, lockern das Gewebe und unterstützen die Regeneration, sodass sich das körperliche Wohlbefinden und die Beweglichkeit spürbar verbessern können.",
-    image: "images/S_3_3.png",
+    image: null,
     imageAlt: "Medizinische Massage in der Physiotherapie",
   },
   {
     title: "Dreidimensionale Skoliose Therapie nach Katharina Schroth",
     description:
       "Die dreidimensionale Skoliose-Therapie nach Katharina Schroth ist ein spezialisiertes Behandlungskonzept bei Wirbelsäulenverkrümmungen. Durch gezielte Korrekturübungen, Atemlenkung und Haltungsschulung wird daran gearbeitet, die Aufrichtung des Körpers zu verbessern, muskuläre Dysbalancen auszugleichen und das Bewusstsein für eine günstige Körperhaltung im Alltag zu stärken.",
-    image: "images/img_6.jpg",
+    image: null,
     imageAlt: "Spezialisierte Therapie zur Haltungskorrektur",
   },
   {
     title: "Wärmetherapie (Heißluft, Fango mit Naturmoor,Heiße Rolle)",
     description:
       "Wärmeanwendungen wie Heißluft, Fango mit Naturmoor oder die Heiße Rolle werden eingesetzt, um verspannte Muskulatur gezielt zu lockern und die Durchblutung anzuregen. Sie wirken schmerzlindernd, bereiten das Gewebe auf weitere physiotherapeutische Maßnahmen vor und eignen sich besonders bei Rücken-, Gelenk- und Muskelbeschwerden.",
-    image: "images/img_7.jpg",
+    image: null,
     imageAlt: "Wärmetherapie in der Physiotherapie",
   },
   {
     title: "Kältetherapie-Eis",
     description:
       "Die Kältetherapie mit Eis ist eine bewährte Maßnahme bei akuten Reizzuständen, Entzündungen und Schwellungen. Durch den gezielten Kältereiz können Schmerzen reduziert, überschießende Entzündungsreaktionen gedämpft und das Gewebe nach Verletzungen oder Überlastungen wirksam beruhigt werden.",
-    image: "images/img_8.jpg",
+    image: null,
     imageAlt: "Kältetherapie mit Eis",
   },
   {
     title: "Elektrotherapie (elektrostimulation bei Fazialisparese)",
     description:
       "Die Elektrotherapie nutzt unterschiedliche Stromformen, um Schmerzen zu lindern, die Durchblutung zu fördern, Heilungsprozesse zu unterstützen und geschwächte Muskulatur gezielt zu stimulieren. Sie wird unter anderem bei Muskelverspannungen, Rücken- und Gelenkbeschwerden, Sportverletzungen sowie ergänzend zur Elektrostimulation bei Fazialisparese eingesetzt.",
-    image: "images/img_9.jpg",
+    image: null,
     imageAlt: "Elektrotherapie und Elektrostimulation",
   },
   {
     title: "Ultraschall",
     description:
       "Die Ultraschalltherapie arbeitet mit hochfrequenten Schallwellen, die tief in das Gewebe eindringen und dort stoffwechselanregend sowie lockernd wirken können. Sie unterstützt die Behandlung von Muskel- und Sehnenbeschwerden, fördert die Regeneration nach Überlastungen und kann bei schmerzhaften Verhärtungen oder entzündlichen Reizzuständen sinnvoll ergänzend eingesetzt werden.",
-    image: "images/img_8.jpg",
+    image: null,
     imageAlt: "Ultraschallbehandlung in der Physiotherapie",
   },
   {
@@ -140,7 +140,7 @@ export const services = [
     title: "Extension-Schlingentisch",
     description:
       "Der Extension-Schlingentisch ermöglicht eine besonders entlastende Lagerung, bei der einzelne Körperabschnitte in Schlingen aufgehängt werden. So können Bewegungen unter reduzierter Schwerkraft ausgeführt, Gelenke geschont und durch sanfte Traktion Druck auf Wirbelsäule oder Gelenkstrukturen verringert werden, was vor allem bei schmerzhaften Bewegungseinschränkungen hilfreich ist.",
-    image: "images/S_4_1.png",
+    image: null,
     imageAlt: "Behandlung am Extension-Schlingentisch",
   },
   {

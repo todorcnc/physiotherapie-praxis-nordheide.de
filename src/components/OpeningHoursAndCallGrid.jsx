@@ -3,6 +3,7 @@ import PhoneInTalkRoundedIcon from "@mui/icons-material/PhoneInTalkRounded";
 import ScheduleRoundedIcon from "@mui/icons-material/ScheduleRounded";
 import { Button, Grid, Stack, Typography } from "@mui/material";
 import { appointmentCardContent, openingHoursCompact, practiceInfo } from "../data/siteContent";
+import { handlePhoneDialClick, phoneHref } from "../lib/phoneDial";
 import IconInfoCard from "./IconInfoCard";
 
 function OpeningHoursAndCallGrid() {
@@ -33,7 +34,8 @@ function OpeningHoursAndCallGrid() {
           title={appointmentCardContent.title}
           action={
             <Button
-              href={`tel:${practiceInfo.phone.replaceAll(" ", "")}`}
+              href={phoneHref(practiceInfo.phone)}
+              onClick={handlePhoneDialClick}
               variant="contained"
               color="primary"
               startIcon={<CallRoundedIcon />}

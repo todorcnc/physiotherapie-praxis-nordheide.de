@@ -23,6 +23,7 @@ function Layout() {
   return (
     <Box sx={{ minHeight: "100vh", background: "linear-gradient(180deg, #f6f4ef 0%, #fcfbf8 100%)" }}>
       <AppBar
+        component="header"
         position="sticky"
         color="transparent"
         elevation={0}
@@ -50,7 +51,7 @@ function Layout() {
               </Box> */}
             </Stack>
 
-            <Stack direction="row" spacing={4} alignItems="center" sx={{ display: { xs: "none", md: "flex" } }}>
+            <Stack component="nav" aria-label="Hauptnavigation" direction="row" spacing={4} alignItems="center" sx={{ display: { xs: "none", md: "flex" } }}>
               {navigationItems.map((item) => (
                 <NavLink key={item.path} to={item.path} style={navLinkStyle}>
                   {item.label}
@@ -70,10 +71,10 @@ function Layout() {
 
       <Drawer anchor="right" open={mobileOpen} onClose={() => setMobileOpen(false)}>
         <Box sx={{ width: 280, p: 3 }}>
-          <Typography variant="h6" sx={{ mb: 2 }}>
+          <Typography component="h2" variant="h6" sx={{ mb: 2 }}>
             Navigation
           </Typography>
-          <List>
+          <List component="nav" aria-label="Mobile Hauptnavigation">
             {navigationItems.map((item) => (
               <ListItemButton key={item.path} component={NavLink} to={item.path} onClick={() => setMobileOpen(false)}>
                 <ListItemText primary={item.label} />
@@ -83,13 +84,15 @@ function Layout() {
         </Box>
       </Drawer>
 
-      <Outlet />
+      <Box component="main">
+        <Outlet />
+      </Box>
 
       <Box component="footer" sx={{ py: 5, mt: 8, borderTop: "1px solid rgba(13, 110, 110, 0.08)" }}>
         <Container>
           <Stack direction={{ xs: "column", md: "row" }} spacing={3} justifyContent="space-between" alignItems={{ xs: "flex-start", md: "center" }}>
             <Box>
-              <Typography variant="h6" sx={{ mb: 1, fontFamily: '"Fraunces", Georgia, serif' }}>
+              <Typography component="p" variant="h6" sx={{ mb: 1, fontFamily: '"Fraunces", Georgia, serif' }}>
                 {practiceInfo.name}
               </Typography>
               <Typography color="text.secondary">

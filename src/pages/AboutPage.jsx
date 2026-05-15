@@ -1,6 +1,8 @@
 import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 import { withBase } from "../config/runtime";
 import SectionIntro from "../components/SectionIntro";
+import Seo from "../components/Seo";
+import { breadcrumbJsonLd, localBusinessJsonLd, pageSeo } from "../data/seo";
 
 const strengths = [
   "Persönliche physiotherapeutische Betreuung mit Blick auf den ganzen Menschen",
@@ -19,14 +21,25 @@ const cabinetImages = [
   { src: "images/praxis_images/praxis_3.png", alt: "Weiterer Eindruck aus den Praxisräumen" },
 ];
 
+const aboutStructuredData = [
+  localBusinessJsonLd(),
+  breadcrumbJsonLd([
+    { name: "Start", path: pageSeo.home.path },
+    { name: "Ueber uns", path: pageSeo.about.path },
+  ]),
+];
+
 function AboutPage() {
   return (
     <>
+      <Seo {...pageSeo.about} jsonLd={aboutStructuredData} />
+
       <Container sx={{ py: { xs: 8, md: 10 } }}>
         <Box className="feature-band">
           <Grid container spacing={5} alignItems="center">
             <Grid size={{ xs: 12, md: 6 }}>
               <SectionIntro
+                titleComponent="h1"
                 eyebrow="Über uns"
                 title="Physiotherapie mit persönlichem Anspruch und klarem Therapieziel."
                 description="Die Physiotherapie Praxis Nordheide steht für moderne physiotherapeutische Behandlung, individuelle Betreuung und das Ziel, nachhaltige Ergebnisse für Ihre Gesundheit und Lebensqualität zu erreichen. Wir begleiten jede Patientin und jeden Patienten mit einem persönlich abgestimmten Therapieansatz, der fachliche Qualität, Ruhe und eine vertrauensvolle Atmosphäre miteinander verbindet."

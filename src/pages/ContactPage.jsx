@@ -1,25 +1,38 @@
 import AlternateEmailRoundedIcon from "@mui/icons-material/AlternateEmailRounded";
 import LocationOnRoundedIcon from "@mui/icons-material/LocationOnRounded";
-import { Container, Grid, Typography } from "@mui/material";
+import { Container, Grid, Link, Typography } from "@mui/material";
 import ConsentAwareEmbed from "../components/ConsentAwareEmbed";
 import IconInfoCard from "../components/IconInfoCard";
 import OpeningHoursAndCallGrid from "../components/OpeningHoursAndCallGrid";
 import SectionIntro from "../components/SectionIntro";
+import Seo from "../components/Seo";
 import { practiceInfo } from "../data/siteContent";
+import { breadcrumbJsonLd, localBusinessJsonLd, pageSeo } from "../data/seo";
 
 const practiceAddress = `${practiceInfo.addressLine1}, ${practiceInfo.addressLine2}`;
 const googleMapsEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(practiceAddress)}&z=16&output=embed`;
 
 const contactItems = [
-  { icon: <AlternateEmailRoundedIcon />, title: "E-Mail", content: practiceInfo.email },
+  { icon: <AlternateEmailRoundedIcon />, title: "E-Mail", content: practiceInfo.email, href: `mailto:${practiceInfo.email}` },
   { icon: <LocationOnRoundedIcon />, title: "Adresse", content: practiceAddress },
+];
+
+const contactStructuredData = [
+  localBusinessJsonLd(),
+  breadcrumbJsonLd([
+    { name: "Start", path: pageSeo.home.path },
+    { name: "Kontakt", path: pageSeo.contact.path },
+  ]),
 ];
 
 function ContactPage() {
   return (
     <>
+      <Seo {...pageSeo.contact} jsonLd={contactStructuredData} />
+
       <Container sx={{ py: { xs: 8, md: 10 } }}>
         <SectionIntro
+          titleComponent="h1"
           eyebrow="Kontaktinfos"
           title="Alle wichtigen Angaben an einem Ort."
           description="So erreichen Sie unsere Praxis schnell und unkompliziert - telefonisch, per E-Mail oder direkt vor Ort."
@@ -28,9 +41,15 @@ function ContactPage() {
           {contactItems.map((item) => (
             <Grid key={item.title} size={{ xs: 12, md: 6 }}>
               <IconInfoCard icon={item.icon} title={item.title} titleVariant="h5">
-                <Typography color="text.secondary" sx={{ lineHeight: 1.8 }}>
-                  {item.content}
-                </Typography>
+                {item.href ? (
+                  <Link href={item.href} color="text.secondary" underline="hover" sx={{ lineHeight: 1.8 }}>
+                    {item.content}
+                  </Link>
+                ) : (
+                  <Typography color="text.secondary" sx={{ lineHeight: 1.8 }}>
+                    {item.content}
+                  </Typography>
+                )}
               </IconInfoCard>
             </Grid>
           ))}

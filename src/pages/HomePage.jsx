@@ -3,17 +3,29 @@ import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import OpeningHoursAndCallGrid from "../components/OpeningHoursAndCallGrid";
 import SectionIntro from "../components/SectionIntro";
+import Seo from "../components/Seo";
 import { withBase } from "../config/runtime";
 import { practiceInfo } from "../data/siteContent";
+import { breadcrumbJsonLd, localBusinessJsonLd, pageSeo, websiteJsonLd } from "../data/seo";
+import { handlePhoneDialClick, phoneHref } from "../lib/phoneDial";
+
+const homeStructuredData = [
+  websiteJsonLd(),
+  localBusinessJsonLd(),
+  breadcrumbJsonLd([{ name: "Start", path: pageSeo.home.path }]),
+];
 
 function HomePage() {
   return (
     <>
+      <Seo {...pageSeo.home} jsonLd={homeStructuredData} />
+
       <Container sx={{ py: { xs: 2, md: 4 } }}>
         <Box className="feature-band">
           <SectionIntro
             eyebrow="Willkommen"
             title="Physiotherapie Praxis Nordheide"
+            titleComponent="h1"
             description="Herzlich willkommen in unserer Praxis für Physiotherapie und Krankengymnastik im Münchner Norden - im Ärztehaus Nordheide."
           />
           <Stack direction={{ xs: "column", md: "row" }} spacing={4} alignItems="center">
@@ -59,8 +71,11 @@ function HomePage() {
               </Stack>
 
               <Stack direction={{ xs: "column", sm: "row" }} spacing={2} sx={{ mt: 4 }}>
-                <Button href={`tel:${practiceInfo.phone.replaceAll(" ", "")}`} variant="contained" color="primary" startIcon={<CallRoundedIcon />}>
+                <Button href={phoneHref(practiceInfo.phone)} onClick={handlePhoneDialClick} variant="contained" color="primary" startIcon={<CallRoundedIcon />}>
                   Jetzt anrufen
+                </Button>
+                <Button component={NavLink} to="/leistungen" variant="outlined" color="primary">
+                  Leistungen ansehen
                 </Button>
                 <Button component={NavLink} to="/kontakt" variant="outlined" color="primary">
                   Kontakt & Anfahrt
