@@ -34,6 +34,24 @@ export const pageSeo = {
     description:
       "Kontakt zur Physiotherapie Praxis Nordheide in der Neuherbergstrasse 100, 80937 Muenchen. Telefonnummer, E-Mail, Oeffnungszeiten und Anfahrt.",
   },
+  impressum: {
+    path: "/impressum",
+    title: "Impressum | Physiotherapie Praxis Nordheide",
+    description:
+      "Impressum der Physiotherapie Praxis Nordheide in Muenchen mit Angaben zum Verantwortlichen, Kontakt und Praxisanschrift.",
+  },
+  datenschutz: {
+    path: "/datenschutz",
+    title: "Datenschutz | Physiotherapie Praxis Nordheide",
+    description:
+      "Datenschutzerklaerung der Physiotherapie Praxis Nordheide mit Informationen zur Verarbeitung personenbezogener Daten auf dieser Website.",
+  },
+  agb: {
+    path: "/agb",
+    title: "AGB | Physiotherapie Praxis Nordheide",
+    description:
+      "Allgemeine Geschaeftsbedingungen der Physiotherapie Praxis Nordheide fuer Terminvereinbarungen und physiotherapeutische Leistungen.",
+  },
 };
 
 export const seoPages = Object.values(pageSeo);

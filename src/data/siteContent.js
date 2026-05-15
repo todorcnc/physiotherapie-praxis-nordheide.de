@@ -5,6 +5,12 @@ export const navigationItems = [
   { label: "Kontakt", path: "/kontakt" },
 ];
 
+export const legalNavigationItems = [
+  { label: "Impressum", path: "/impressum" },
+  { label: "Datenschutz", path: "/datenschutz" },
+  { label: "AGB", path: "/agb" },
+];
+
 export const practiceInfo = {
   name: "Physiotherapie Praxis Nordheide",
   logo: "images/logo.png",

@@ -1,11 +1,10 @@
 import MenuIcon from "@mui/icons-material/Menu";
-import PhoneInTalkRoundedIcon from "@mui/icons-material/PhoneInTalkRounded";
-import { AppBar, Box, Button, Container, Drawer, IconButton, List, ListItemButton, ListItemText, Stack, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box, Container, Drawer, IconButton, Link, List, ListItemButton, ListItemText, Stack, Toolbar, Typography } from "@mui/material";
 import { useState } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { useConsent } from "../context/ConsentContext";
 import { withBase } from "../config/runtime";
-import { navigationItems, practiceInfo } from "../data/siteContent";
+import { legalNavigationItems, navigationItems, practiceInfo } from "../data/siteContent";
 import CookieBanner from "./CookieBanner";
 import CookieSettingsButton from "./CookieSettingsButton";
 import CookieSettingsDialog from "./CookieSettingsDialog";
@@ -92,23 +91,57 @@ function Layout() {
         <Container>
           <Stack direction={{ xs: "column", md: "row" }} spacing={3} justifyContent="space-between" alignItems={{ xs: "flex-start", md: "center" }}>
             <Box>
-              <Typography component="p" variant="h6" sx={{ mb: 1, fontFamily: '"Fraunces", Georgia, serif' }}>
+              <Typography component="p" variant="h6" sx={{ mb: 1 }}>
                 {practiceInfo.name}
               </Typography>
               <Typography color="text.secondary">
                 {practiceInfo.addressLine1}, {practiceInfo.addressLine2}
               </Typography>
             </Box>
-            <Box>
-              <Typography color="text.secondary">Tel. {practiceInfo.phone}</Typography>
-              <Typography color="text.secondary">{practiceInfo.email}</Typography>
-              <Stack direction={{ xs: "column", sm: "row" }} spacing={2} sx={{ mt: 1.5 }}>
+
+            <Stack spacing={1.5} alignItems={{ xs: "flex-start", md: "flex-end" }}>
+              <Box sx={{ textAlign: { xs: "left", md: "right" } }}>
+                <Typography color="text.secondary">Tel. {practiceInfo.phone}</Typography>
+                <Link href={`mailto:${practiceInfo.email}`} color="text.secondary" underline="hover">
+                  {practiceInfo.email}
+                </Link>
+              </Box>
+              <Stack
+                component="nav"
+                aria-label="Footer Links"
+                direction="row"
+                spacing={1}
+                alignItems="center"
+                useFlexGap
+                sx={{
+                  flexWrap: "wrap",
+                  justifyContent: { xs: "flex-start", md: "flex-end" },
+                  "& > *:not(:last-child)::after": {
+                    content: '"|"',
+                    color: "text.disabled",
+                    ml: 1,
+                  },
+                }}
+              >
                 <CookieSettingsButton />
-                <Button variant="text" color="primary" onClick={resetConsent} sx={{ px: 0, minWidth: "auto" }}>
+                <Link
+                  component="button"
+                  type="button"
+                  color="text.secondary"
+                  underline="hover"
+                  variant="body2"
+                  onClick={resetConsent}
+                  sx={{ border: 0, background: "transparent", cursor: "pointer", p: 0, font: "inherit" }}
+                >
                   Reset consent
-                </Button>
+                </Link>
+                {legalNavigationItems.map((item) => (
+                  <Link key={item.path} component={NavLink} to={item.path} color="text.secondary" underline="hover" variant="body2">
+                    {item.label}
+                  </Link>
+                ))}
               </Stack>
-            </Box>
+            </Stack>
           </Stack>
         </Container>
       </Box>

@@ -1,20 +1,21 @@
-import SettingsRoundedIcon from "@mui/icons-material/SettingsRounded";
-import { Button } from "@mui/material";
+import { Link } from "@mui/material";
 import { useConsent } from "../context/ConsentContext";
 
 function CookieSettingsButton() {
   const { openSettings } = useConsent();
 
   return (
-    <Button
-      variant="text"
-      color="primary"
-      startIcon={<SettingsRoundedIcon />}
+    <Link
+      component="button"
+      type="button"
+      color="text.secondary"
+      underline="hover"
+      variant="body2"
       onClick={openSettings}
-      sx={{ px: 0, minWidth: "auto", justifyContent: "flex-start" }}
+      sx={{ border: 0, background: "transparent", cursor: "pointer", p: 0, font: "inherit" }}
     >
       Cookie settings
-    </Button>
+    </Link>
   );
 }
 
