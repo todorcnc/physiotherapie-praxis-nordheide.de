@@ -76,7 +76,7 @@ export const services = [
     title: "Manuelle Therapie",
     description:
       "Die manuelle Therapie ist eine spezialisierte Form der Physiotherapie, bei der Funktionsstörungen an Gelenken, Muskeln und Nerven mit gezielten Handgriffen untersucht und behandelt werden. Durch sanfte Mobilisationen und präzise Techniken können Schmerzen gelindert, Blockaden gelöst und natürliche Bewegungsabläufe wieder verbessert werden.",
-    image: "images/therapy_services/manuelle_therapie.png",
+    image: "images/therapy_services/manuelle_therapie_2.png",
     imageAlt: "Manuelle Therapie an Arm und Schulter",
   },
   {
@@ -97,14 +97,14 @@ export const services = [
     title: "Medizinische Massagen",
     description:
       "Medizinische Massagen dienen nicht nur der Entspannung, sondern sind eine gezielte therapeutische Maßnahme bei muskulären Verspannungen und schmerzhaften Belastungszuständen. Sie fördern die Durchblutung, lockern das Gewebe und unterstützen die Regeneration, sodass sich das körperliche Wohlbefinden und die Beweglichkeit spürbar verbessern können.",
-    image: null,
+    image: "images/therapy_services/manuelle_therapie.png",
     imageAlt: "Medizinische Massage in der Physiotherapie",
   },
   {
     title: "Dreidimensionale Skoliose Therapie nach Katharina Schroth",
     description:
       "Die dreidimensionale Skoliose-Therapie nach Katharina Schroth ist ein spezialisiertes Behandlungskonzept bei Wirbelsäulenverkrümmungen. Durch gezielte Korrekturübungen, Atemlenkung und Haltungsschulung wird daran gearbeitet, die Aufrichtung des Körpers zu verbessern, muskuläre Dysbalancen auszugleichen und das Bewusstsein für eine günstige Körperhaltung im Alltag zu stärken.",
-    image: null,
+    image: "images/therapy_services/skolioze_therapie.png",
     imageAlt: "Spezialisierte Therapie zur Haltungskorrektur",
   },
   {
