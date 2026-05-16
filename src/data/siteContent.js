@@ -104,7 +104,7 @@ export const services = [
     title: "Dreidimensionale Skoliose Therapie nach Katharina Schroth",
     description:
       "Die dreidimensionale Skoliose-Therapie nach Katharina Schroth ist ein spezialisiertes Behandlungskonzept bei Wirbelsäulenverkrümmungen. Durch gezielte Korrekturübungen, Atemlenkung und Haltungsschulung wird daran gearbeitet, die Aufrichtung des Körpers zu verbessern, muskuläre Dysbalancen auszugleichen und das Bewusstsein für eine günstige Körperhaltung im Alltag zu stärken.",
-    image: "images/therapy_services/skolioze_therapie.png",
+    image: "images/therapy_services/skolioze_therapie_2.png",
     imageAlt: "Spezialisierte Therapie zur Haltungskorrektur",
   },
   {
