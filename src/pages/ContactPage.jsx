@@ -12,10 +12,7 @@ import { breadcrumbJsonLd, localBusinessJsonLd, pageSeo } from "../data/seo";
 const practiceAddress = `${practiceInfo.addressLine1}, ${practiceInfo.addressLine2}`;
 const googleMapsEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(practiceAddress)}&z=16&output=embed`;
 
-const contactItems = [
-  { icon: <AlternateEmailRoundedIcon />, title: "E-Mail", content: practiceInfo.email, href: `mailto:${practiceInfo.email}` },
-  { icon: <LocationOnRoundedIcon />, title: "Adresse", content: practiceAddress },
-];
+const contactItems = [];
 
 const contactStructuredData = [
   localBusinessJsonLd(),
@@ -29,13 +26,12 @@ function ContactPage() {
   return (
     <>
       <Seo {...pageSeo.contact} jsonLd={contactStructuredData} />
-
       <Container sx={{ py: { xs: 8, md: 10 } }}>
         <SectionIntro
           titleComponent="h1"
           eyebrow="Kontaktinfos"
           title="Alle wichtigen Angaben an einem Ort."
-          description="So erreichen Sie unsere Praxis schnell und unkompliziert - telefonisch, per E-Mail oder direkt vor Ort."
+          description="So erreichen Sie unsere Praxis schnell und unkompliziert - telefonisch oder direkt vor Ort."
         />
         <Grid container spacing={3}>
           {contactItems.map((item) => (

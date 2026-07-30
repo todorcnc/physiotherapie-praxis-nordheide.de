@@ -4,7 +4,6 @@ export const legalOwner = {
   street: "Neuherbergstraße 100",
   city: "80937 München",
   phone: "089 461 376 43",
-  email: "kontakt@physiotherapie-praxis-nordheide.de",
 };
 
 export const legalPages = {
@@ -19,7 +18,7 @@ export const legalPages = {
       },
       {
         title: "Kontakt",
-        paragraphs: [`Telefon: ${legalOwner.phone}`, `E-Mail: ${legalOwner.email}`],
+        paragraphs: [`Telefon: ${legalOwner.phone}`],
       },
       {
         title: "Praxisbezeichnung",
@@ -47,14 +46,7 @@ export const legalPages = {
     sections: [
       {
         title: "1. Verantwortlicher",
-        paragraphs: [
-          legalOwner.practice,
-          legalOwner.owner,
-          legalOwner.street,
-          legalOwner.city,
-          `E-Mail: ${legalOwner.email}`,
-          `Telefon: ${legalOwner.phone}`,
-        ],
+        paragraphs: [legalOwner.practice, legalOwner.owner, legalOwner.street, legalOwner.city, `Telefon: ${legalOwner.phone}`],
       },
       {
         title: "2. Zugriffsdaten und Hosting",
@@ -96,9 +88,7 @@ export const legalPages = {
       },
       {
         title: "7. Änderungen dieser Datenschutzerklärung",
-        paragraphs: [
-          "Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen, um sie aktuellen rechtlichen Anforderungen anzupassen.",
-        ],
+        paragraphs: ["Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen, um sie aktuellen rechtlichen Anforderungen anzupassen."],
       },
     ],
   },

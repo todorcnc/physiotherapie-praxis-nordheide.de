@@ -19,7 +19,6 @@ export const practiceInfo = {
   addressLine2: "80937 München",
   phone: "089 461 376 43",
   fax: "089 461 376 45",
-  email: "kontakt@physiotherapie-praxis-nordheide.de",
   hours: ["Mo. - Do.: 08:00 - 13:00 Uhr", "Mo. - Do.: 14:00 - 19:00 Uhr", "Fr.: 08:00 - 14:00 Uhr"],
   note: "Zulassung für alle Kassen. Hausbesuche auf Anfrage möglich.",
 };
