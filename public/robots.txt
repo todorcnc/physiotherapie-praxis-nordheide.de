@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /images/unused/
 
-Sitemap: https://todorcnc.github.io/physiotherapie-praxis-nordheide.de/sitemap.xml
+Sitemap: https://physiotherapie-praxis-nordheide.de/sitemap.xml

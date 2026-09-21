@@ -1,6 +1,6 @@
 import { practiceInfo, services } from "./siteContent";
 
-export const siteUrl = "https://todorcnc.github.io/physiotherapie-praxis-nordheide.de";
+export const siteUrl = "https://physiotherapie-praxis-nordheide.de";
 
 export const seoDefaults = {
   siteName: practiceInfo.name,
